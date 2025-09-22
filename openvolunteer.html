@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="MECAMP 2026 - Program Volunteer Terbuka. Bergabunglah sebagai relawan dalam acara teknologi terbesar tahun ini.">
+  <meta name="keywords" content="MECAMP, volunteer, relawan, teknologi, acara, kontribusi, event teknologi">
+  <meta name="author" content="MECAMP Team">
+
+  <title>MECAMP 2026 - Program Volunteer</title>
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <style>
+   /* Hero section dengan animasi gradient */
+.hero {
+        position: relative;
+        background: url('img/2.jpeg') no-repeat center center/cover;
+        height: 100vh;
+        color: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 1;
+}
+    .hero::before {
+        content: "";
+        position: absolute;
+        top: 0; left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.6); /* gelapnya bisa diatur */
+        z-index: 0;
+    }
+        .hero .container {
+        position: relative;
+        z-index: 1; /* agar teks di atas overlay */
+    }
+
+    /* Card Styling */
+.card {
+  border: none;
+  border-radius: 12px;
+  padding: 1rem;
+  transition: all 0.3s ease;
+  background-color: #fff;
+}
+
+.card:hover {
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  transform: translateY(-5px);
+}
+
+/* Icon Section (optional) */
+.card-body .mb-3 i {
+  font-size: 2rem;
+  color: #0d6efd; /* Default icon color (Bootstrap primary) */
+}
+
+/* Title Styling */
+.card-title {
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+/* Button Styling */
+.btn-outline-relawan {
+  font-size: 0.875rem;
+  padding: 0.4rem 1rem;
+  border-radius: 6px;
+  border: 2px solid #0d6efd;
+  color: #0d6efd;
+  background-color: transparent;
+  transition: all 0.3s ease;
+}
+
+.btn-outline-relawan:hover {
+  background-color: #0d6efd;
+  color: #fff;
+  border-color: #0d6efd;
+}
+
+/* Umum */
+section { padding:60px 0; }
+.text-justify { text-align: justify; }
+
+/* Card hover */
+.features .card { transition: transform 0.3s ease; }
+.features .card:hover { transform: translateY(-5px); }
+
+/* Footer */
+footer { background-color:#002b5b; color:white; padding:20px 0; text-align:center; }
+  </style>
+</head>
+<body>
+
+  <!-- Hero Section -->
+  <header class="hero d-flex align-items-center justify-content-center text-center">
+    <div class="container">
+      <h1 class="display-3 fw-bold">MECAMP 2026</h1>
+      <p class="lead">Program Volunteer — Bersama Membangun Masa Depan Teknologi</p>
+      <p>Jadilah bagian dari tim relawan MECAMP dan bantu wujudkan acara teknologi terbesar tahun ini.</p>
+      <a href="#volunteer" class="btn btn-light btn-lg mt-3">Lihat Divisi Relawan</a>
+    </div>
+  </header>
+
+<section id="volunteer" class="py-5 bg-light text-center">
+  <div class="container">
+    <h2 class="mb-4 fw-bold">Pilih Divisi Relawan Anda</h2>
+    <p class="mb-5">Klik tombol di bawah untuk langsung mendaftar sesuai divisi yang kamu minati.</p>
+
+    <div class="row justify-content-center g-4">
+      <!-- Divisi Acara -->
+      <div class="col-md-4">
+        <div class="card h-100 shadow-sm">
+          <div class="card-body">
+            <h5 class="card-title">Divisi Acara</h5>
+            <p class="card-text">Merancang rundown, koordinasi teknis, dan kelancaran jalannya acara.</p>
+            <a href="https://docs.google.com/forms/d/e/1FAIpQLSeqjf2ismw-Ub3RqGWzh6upJ9Z5D3enmN-1qfalGySL-UM-jA/viewform?usp=header" target="_blank" class="btn btn-outline-relawan">Daftar Divisi Acara</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Divisi Humas -->
+      <div class="col-md-4">
+        <div class="card h-100 shadow-sm">
+          <div class="card-body">
+            <h5 class="card-title">Divisi Humas</h5>
+            <p class="card-text">Mengelola komunikasi eksternal, publikasi, dan hubungan dengan mitra.</p>
+            <a href="https://docs.google.com/forms/d/e/1FAIpQLSeX6O7jGs6NW4TTX_sG2bClsbBJfxXLQGQ9ed6HQOavc6RZJw/viewform?usp=header" target="_blank" class="btn btn-outline-relawan">Daftar Divisi Humas</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Divisi Dana dan Usaha -->
+      <div class="col-md-4">
+        <div class="card h-100 shadow-sm">
+          <div class="card-body">
+            <h5 class="card-title">Divisi Dana dan Usaha (Danus)</h5>
+            <p class="card-text">Mengelola fundraising, sponsorship, dan penjualan merchandise.</p>
+            <a href="https://docs.google.com/forms/d/e/1FAIpQLSesW_TLjaLvLiVFRPk3Qno8-CAV9ScHe7n_XGSvQ__66u75sw/viewform?usp=header" target="_blank" class="btn btn-outline-relawan">Daftar Divisi Danus</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Divisi Logistik -->
+      <div class="col-md-4">
+        <div class="card h-100 shadow-sm">
+          <div class="card-body">
+            <h5 class="card-title">Divisi Logistik</h5>
+            <p class="card-text">Mengatur perlengkapan, konsumsi, dan kebutuhan teknis acara.</p>
+            <a href="https://docs.google.com/forms/d/e/1FAIpQLSdE37xRd3Bb86kXV_my6C01VZIieDEQVVOqNEX-P-8xQOcTnQ/viewform?usp=dialog" target="_blank" class="btn btn-outline-relawan">Daftar Divisi Logistik</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Divisi Media dan Kreatif -->
+      <div class="col-md-4">
+        <div class="card h-100 shadow-sm">
+          <div class="card-body">
+            <h5 class="card-title">Divisi Media dan Kreatif (Medkraf)</h5>
+            <p class="card-text">Desain grafis, dokumentasi, konten digital, dan branding acara.</p>
+            <a href="https://docs.google.com/forms/d/e/1FAIpQLSeTcihfYJXl3j6H491dyRBbqmzCPSifj_sBTk-Z8gZe9WoszQ/viewform?usp=header" target="_blank" class="btn btn-outline-relawan">Daftar Divisi Medkraf</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Divisi Keamanan -->
+      <div class="col-md-4">
+        <div class="card h-100 shadow-sm">
+          <div class="card-body">
+            <h5 class="card-title">Divisi Keamanan</h5>
+            <p class="card-text">Menjaga ketertiban, safety, dan pengaturan akses area acara.</p>
+            <a href="https://docs.google.com/forms/d/e/1FAIpQLSdNBUEIB0Rktw28-X814_ibjuHqhhqiYu4Vk2vJbvKCEagOgQ/viewform?usp=header" target="_blank" class="btn btn-outline-relawan">Daftar Divisi Keamanan</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- BPH -->
+      <div class="col-md-4">
+        <div class="card h-100 shadow-sm">
+          <div class="card-body">
+            <h5 class="card-title">Badan Pengurus Harian (BPH)</h5>
+            <p class="card-text">Koordinasi antar divisi, pengambilan keputusan, dan pengawasan umum.</p>
+            <a href="https://docs.google.com/forms/d/e/1FAIpQLScSVAEh0KSqhSHmjBPGWniX3Gtw5W9tSnJ0QKDhbHF5a0WV1A/viewform?usp=header" target="_blank" class="btn btn-outline-relawan">Daftar BPH</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+  <!-- Footer -->
+<footer>
+    <div class="container">
+        <p class="mb-1 fw-bold">MAN 1 Banyuwangi</p>
+        <small>&copy; 2026 Mansawangi Expo Campus. All rights reserved.</small>
+    </div>
+</footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
