@@ -1,52 +1,1057 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="MECAMP 2026 - Program sponsorship dengan paket Emas, Silver, dan Perunggu. Bergabunglah dengan acara teknologi terbesar tahun ini.">
-  <meta name="keywords" content="MECAMP, sponsorship, teknologi, acara, sponsor">
-  <meta name="author" content="MECAMP Team">
-  
-  <!-- Open Graph Meta Tags untuk social media -->
-  <meta property="og:title" content="MECAMP 2026 - Program Sponsorship">
-  <meta property="og:description" content="Bergabunglah dengan MECAMP 2026 sebagai sponsor dan dukung acara teknologi terbesar tahun ini.">
-  <meta property="og:type" content="website">
-  
-  <!-- Favicon -->
-  <link rel="icon" type="image/x-icon" href="favicon.ico">
-  
-  <title>MECAMP 2026 - Program Sponsorship</title>
-  <link rel="stylesheet" href="css/style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MECAMP-FEST 2026 | Festival Edukasi & Karir MAN 1 Banyuwangi</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Lora:wght@400;500;600&family=Crimson+Text:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --color-primary: #8B4513;
+            --color-secondary: #D4A574;
+            --color-accent: #B8860B;
+            --color-dark: #3E2723;
+            --color-light: #F5E6D3;
+            --color-cream: #FFF8E7;
+        }
+
+        body {
+            font-family: 'Lora', serif;
+            line-height: 1.8;
+            color: var(--color-dark);
+            background: var(--color-cream);
+            overflow-x: hidden;
+        }
+
+        /* Navigasi dengan Motif Batik */
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: linear-gradient(135deg, rgba(62, 39, 35, 0.97), rgba(139, 69, 19, 0.95));
+            padding: 1rem 0;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+            z-index: 1000;
+            border-bottom: 3px solid var(--color-accent);
+        }
+
+        nav::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: 
+                repeating-linear-gradient(45deg, transparent, transparent 10px, rgba(212, 165, 116, 0.05) 10px, rgba(212, 165, 116, 0.05) 20px),
+                repeating-linear-gradient(-45deg, transparent, transparent 10px, rgba(212, 165, 116, 0.05) 10px, rgba(212, 165, 116, 0.05) 20px);
+            opacity: 0.3;
+            pointer-events: none;
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .nav-logo {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--color-secondary);
+            text-decoration: none;
+            letter-spacing: 1px;
+        }
+
+        .nav-menu {
+            display: flex;
+            list-style: none;
+            gap: 2.5rem;
+        }
+
+        .nav-menu a {
+            color: var(--color-light);
+            text-decoration: none;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            position: relative;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-size: 0.9rem;
+        }
+
+        .nav-menu a::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--color-accent);
+            transition: width 0.3s ease;
+        }
+
+        .nav-menu a:hover {
+            color: var(--color-accent);
+        }
+
+        .nav-menu a:hover::after {
+            width: 100%;
+        }
+
+        /* Hero Section dengan Batik Pattern */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 8rem 2rem 4rem;
+            background: linear-gradient(135deg, var(--color-dark) 0%, #5D4037 100%);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url('banner.jpeg');
+            background-size: cover;
+            background-position: center;
+            opacity: 0.2;
+            z-index: 0;
+        }
+
+        .hero::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: 
+                repeating-linear-gradient(45deg, transparent, transparent 15px, rgba(212, 165, 116, 0.1) 15px, rgba(212, 165, 116, 0.1) 30px),
+                repeating-linear-gradient(-45deg, transparent, transparent 15px, rgba(212, 165, 116, 0.1) 15px, rgba(212, 165, 116, 0.1) 30px);
+            z-index: 1;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            max-width: 1000px;
+        }
+
+        .hero-ornament {
+            font-size: 3rem;
+            color: var(--color-accent);
+            margin-bottom: 1rem;
+            text-shadow: 0 0 20px rgba(212, 165, 116, 0.5);
+        }
+
+        .hero h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(2.5rem, 6vw, 4.5rem);
+            font-weight: 700;
+            margin-bottom: 1.5rem;
+            color: var(--color-secondary);
+            text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.5);
+            letter-spacing: 2px;
+        }
+
+        .hero-tagline {
+            font-family: 'Crimson Text', serif;
+            font-size: clamp(1.3rem, 3vw, 2rem);
+            font-style: italic;
+            color: var(--color-light);
+            margin-bottom: 0.5rem;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+        }
+
+        .hero-subtitle {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(1.1rem, 2.5vw, 1.5rem);
+            color: var(--color-accent);
+            margin-bottom: 2rem;
+            font-weight: 600;
+            letter-spacing: 3px;
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+        }
+
+        .hero-date {
+            display: inline-block;
+            padding: 1rem 2.5rem;
+            background: linear-gradient(135deg, rgba(139, 69, 19, 0.4), rgba(212, 165, 116, 0.4));
+            border: 2px solid var(--color-accent);
+            border-radius: 50px;
+            color: var(--color-light);
+            font-size: 1.3rem;
+            font-weight: 600;
+            margin-bottom: 1.5rem;
+            box-shadow: 0 8px 30px rgba(212, 165, 116, 0.3);
+            backdrop-filter: blur(10px);
+        }
+
+        .hero-description {
+            font-size: 1.2rem;
+            color: var(--color-light);
+            margin-bottom: 2.5rem;
+            line-height: 1.9;
+        }
+
+        .cta-button {
+            display: inline-block;
+            padding: 1.2rem 3rem;
+            background: linear-gradient(135deg, var(--color-primary), var(--color-accent));
+            color: var(--color-cream);
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: 600;
+            font-size: 1.1rem;
+            transition: all 0.4s ease;
+            box-shadow: 0 10px 40px rgba(139, 69, 19, 0.4);
+            border: 2px solid var(--color-accent);
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+        }
+
+        .cta-button:hover {
+            transform: translateY(-5px) scale(1.05);
+            box-shadow: 0 15px 50px rgba(212, 165, 116, 0.6);
+            background: linear-gradient(135deg, var(--color-accent), var(--color-secondary));
+        }
+
+        /* Section Styling */
+        section {
+            padding: 5rem 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .section-ornament {
+            text-align: center;
+            font-size: 2rem;
+            color: var(--color-accent);
+            margin-bottom: 1rem;
+        }
+
+        .section-title {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(2.2rem, 5vw, 3.5rem);
+            text-align: center;
+            margin-bottom: 1rem;
+            color: var(--color-primary);
+            position: relative;
+            padding-bottom: 1.5rem;
+            font-weight: 700;
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 3px;
+            background: linear-gradient(90deg, transparent, var(--color-accent), transparent);
+        }
+
+        .section-subtitle {
+            text-align: center;
+            color: #6D4C41;
+            font-size: 1.2rem;
+            margin-bottom: 4rem;
+            font-style: italic;
+            font-family: 'Crimson Text', serif;
+        }
+
+        /* Tentang Section */
+        .about-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+            margin-top: 3rem;
+        }
+
+        .about-text p {
+            margin-bottom: 1.8rem;
+            font-size: 1.1rem;
+            line-height: 2;
+            text-align: justify;
+            color: var(--color-dark);
+        }
+
+        .about-text p:first-letter {
+            font-size: 3rem;
+            font-weight: 700;
+            color: var(--color-accent);
+            float: left;
+            line-height: 1;
+            margin-right: 0.5rem;
+            font-family: 'Playfair Display', serif;
+        }
+
+        .about-image {
+            height: 450px;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 20px 60px rgba(139, 69, 19, 0.3);
+            border: 4px solid var(--color-secondary);
+            background: linear-gradient(135deg, var(--color-primary), var(--color-dark));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+        }
+
+        .about-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        /* Statistik */
+        .stats {
+            background: linear-gradient(135deg, var(--color-dark), var(--color-primary));
+            padding: 4rem 3rem;
+            border-radius: 20px;
+            margin: 4rem 0;
+            box-shadow: 0 20px 60px rgba(139, 69, 19, 0.4);
+            border: 3px solid var(--color-accent);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .stats::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: 
+                repeating-linear-gradient(45deg, transparent, transparent 20px, rgba(212, 165, 116, 0.05) 20px, rgba(212, 165, 116, 0.05) 40px);
+            opacity: 0.3;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 3rem;
+            text-align: center;
+            position: relative;
+            z-index: 1;
+        }
+
+        .stat-item h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 3.5rem;
+            margin-bottom: 0.5rem;
+            color: var(--color-accent);
+            font-weight: 700;
+        }
+
+        .stat-item p {
+            font-size: 1.2rem;
+            color: var(--color-light);
+        }
+
+        /* Tujuan Kegiatan */
+        .goals-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2.5rem;
+            margin-top: 3rem;
+        }
+
+        .goal-card {
+            background: linear-gradient(145deg, #FFFFFF, var(--color-cream));
+            padding: 2.5rem;
+            border-radius: 20px;
+            box-shadow: 0 10px 40px rgba(139, 69, 19, 0.15);
+            transition: all 0.4s ease;
+            border: 2px solid rgba(212, 165, 116, 0.3);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .goal-card::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(212, 165, 116, 0.1) 0%, transparent 70%);
+            transition: all 0.6s ease;
+        }
+
+        .goal-card:hover::before {
+            top: -100%;
+            right: -100%;
+        }
+
+        .goal-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 60px rgba(139, 69, 19, 0.25);
+            border-color: var(--color-accent);
+        }
+
+        .goal-icon {
+            font-size: 3rem;
+            margin-bottom: 1.5rem;
+            color: var(--color-accent);
+        }
+
+        .goal-card h3 {
+            font-family: 'Playfair Display', serif;
+            color: var(--color-primary);
+            margin-bottom: 1rem;
+            font-size: 1.5rem;
+            font-weight: 600;
+        }
+
+        .goal-card p {
+            color: var(--color-dark);
+            line-height: 1.9;
+        }
+
+        /* Pilar Kegiatan */
+        .pillars-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 2.5rem;
+            margin-top: 3rem;
+        }
+
+        .pillar-card {
+            background: linear-gradient(145deg, #FFFFFF, var(--color-cream));
+            padding: 2.5rem;
+            border-radius: 20px;
+            box-shadow: 0 10px 40px rgba(139, 69, 19, 0.15);
+            transition: all 0.4s ease;
+            text-align: center;
+            border: 2px solid rgba(212, 165, 116, 0.3);
+            position: relative;
+        }
+
+        .pillar-card::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background: linear-gradient(90deg, var(--color-primary), var(--color-accent), var(--color-primary));
+            transform: scaleX(0);
+            transition: transform 0.4s ease;
+        }
+
+        .pillar-card:hover::after {
+            transform: scaleX(1);
+        }
+
+        .pillar-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 60px rgba(139, 69, 19, 0.25);
+            border-color: var(--color-accent);
+        }
+
+        .pillar-icon {
+            font-size: 3.5rem;
+            margin-bottom: 1.5rem;
+            color: var(--color-accent);
+        }
+
+        .pillar-card h3 {
+            font-family: 'Playfair Display', serif;
+            color: var(--color-primary);
+            margin-bottom: 1rem;
+            font-size: 1.6rem;
+            font-weight: 600;
+        }
+
+        .pillar-card p {
+            color: var(--color-dark);
+            line-height: 1.9;
+        }
+
+        /* Timeline / Jadwal */
+        .timeline {
+            position: relative;
+            padding: 3rem 0;
+            margin-top: 3rem;
+        }
+
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 4px;
+            height: 100%;
+            background: linear-gradient(180deg, var(--color-primary), var(--color-accent), var(--color-primary));
+        }
+
+        .timeline-item {
+            display: flex;
+            margin-bottom: 4rem;
+            position: relative;
+            align-items: center;
+        }
+
+        .timeline-item:nth-child(odd) {
+            flex-direction: row-reverse;
+        }
+
+        .timeline-content {
+            width: 45%;
+            background: linear-gradient(145deg, #FFFFFF, var(--color-cream));
+            padding: 2.5rem;
+            border-radius: 20px;
+            box-shadow: 0 10px 40px rgba(139, 69, 19, 0.15);
+            border: 2px solid rgba(212, 165, 116, 0.3);
+            transition: all 0.3s ease;
+            position: relative;
+        }
+
+        .timeline-content::before {
+            content: '';
+            position: absolute;
+            top: 20px;
+            width: 20px;
+            height: 20px;
+            background: var(--color-accent);
+            border-radius: 50%;
+            box-shadow: 0 0 0 4px var(--color-cream), 0 0 0 8px var(--color-accent);
+        }
+
+        .timeline-item:nth-child(odd) .timeline-content::before {
+            left: -60px;
+        }
+
+        .timeline-item:nth-child(even) .timeline-content::before {
+            right: -60px;
+        }
+
+        .timeline-content:hover {
+            transform: scale(1.03);
+            box-shadow: 0 15px 50px rgba(139, 69, 19, 0.25);
+            border-color: var(--color-accent);
+        }
+
+        .timeline-date {
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            background: linear-gradient(135deg, var(--color-primary), var(--color-accent));
+            color: var(--color-cream);
+            padding: 0.8rem 2rem;
+            border-radius: 50px;
+            font-weight: 700;
+            white-space: nowrap;
+            box-shadow: 0 5px 20px rgba(139, 69, 19, 0.4);
+            border: 2px solid var(--color-accent);
+            z-index: 10;
+            font-family: 'Playfair Display', serif;
+        }
+
+        .timeline-content h3 {
+            font-family: 'Playfair Display', serif;
+            color: var(--color-primary);
+            margin-bottom: 1rem;
+            font-size: 1.6rem;
+            font-weight: 600;
+        }
+
+        .timeline-content p {
+            color: var(--color-dark);
+            line-height: 1.9;
+            margin-bottom: 0.8rem;
+        }
+
+        .timeline-content strong {
+            color: var(--color-accent);
+        }
+
+        /* Target Audiens */
+        .audience-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .audience-card {
+            background: linear-gradient(145deg, #FFFFFF, var(--color-cream));
+            padding: 2rem;
+            border-radius: 15px;
+            box-shadow: 0 8px 30px rgba(139, 69, 19, 0.12);
+            text-align: center;
+            border: 2px solid rgba(212, 165, 116, 0.3);
+            transition: all 0.3s ease;
+        }
+
+        .audience-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 15px 45px rgba(139, 69, 19, 0.2);
+            border-color: var(--color-accent);
+        }
+
+        .audience-number {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.5rem;
+            color: var(--color-accent);
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+        }
+
+        .audience-label {
+            color: var(--color-dark);
+            font-size: 1.1rem;
+            line-height: 1.6;
+        }
+
+        /* Kontak */
+        .contact-info {
+            background: linear-gradient(135deg, var(--color-dark), var(--color-primary));
+            padding: 4rem 3rem;
+            border-radius: 20px;
+            text-align: center;
+            color: var(--color-light);
+            margin-top: 3rem;
+            box-shadow: 0 20px 60px rgba(139, 69, 19, 0.3);
+            border: 3px solid var(--color-accent);
+        }
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .contact-item {
+            padding: 1.5rem;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 15px;
+            backdrop-filter: blur(10px);
+            border: 2px solid rgba(212, 165, 116, 0.3);
+            transition: all 0.3s ease;
+        }
+
+        .contact-item:hover {
+            background: rgba(255, 255, 255, 0.15);
+            border-color: var(--color-accent);
+            transform: translateY(-5px);
+        }
+
+        .contact-icon {
+            font-size: 2.5rem;
+            color: var(--color-accent);
+            margin-bottom: 1rem;
+        }
+
+        .contact-item h3 {
+            font-family: 'Playfair Display', serif;
+            margin-bottom: 0.8rem;
+            color: var(--color-secondary);
+        }
+
+        .contact-item p, .contact-item a {
+            color: var(--color-light);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .contact-item a:hover {
+            color: var(--color-accent);
+        }
+
+        /* Footer */
+        footer {
+            background: linear-gradient(135deg, var(--color-dark), #2C1810);
+            color: var(--color-light);
+            text-align: center;
+            padding: 3rem 2rem;
+            border-top: 4px solid var(--color-accent);
+            position: relative;
+        }
+
+        footer::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: 
+                repeating-linear-gradient(45deg, transparent, transparent 15px, rgba(212, 165, 116, 0.03) 15px, rgba(212, 165, 116, 0.03) 30px);
+            opacity: 0.5;
+        }
+
+        footer .footer-content {
+            position: relative;
+            z-index: 1;
+        }
+
+        footer strong {
+            font-family: 'Playfair Display', serif;
+            color: var(--color-accent);
+            font-size: 1.5rem;
+            display: block;
+            margin-bottom: 0.5rem;
+        }
+
+        footer p {
+            margin-bottom: 0.5rem;
+            font-size: 1.05rem;
+        }
+
+        footer .copyright {
+            margin-top: 2rem;
+            padding-top: 2rem;
+            border-top: 1px solid rgba(212, 165, 116, 0.3);
+            opacity: 0.8;
+        }
+
+        /* Responsive */
+        @media (max-width: 968px) {
+            .nav-menu {
+                gap: 1.5rem;
+            }
+
+            .about-content {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+
+            .timeline::before {
+                left: 30px;
+            }
+
+            .timeline-item {
+                flex-direction: column !important;
+                padding-left: 70px;
+                align-items: flex-start;
+            }
+
+            .timeline-content {
+                width: 100%;
+            }
+
+            .timeline-content::before {
+                left: -60px !important;
+                right: auto !important;
+            }
+
+            .timeline-date {
+                left: 30px;
+                transform: translateX(0);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .nav-container {
+                flex-direction: column;
+                gap: 1rem;
+            }
+
+            .nav-menu {
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 1rem;
+            }
+
+            section {
+                padding: 3rem 1.5rem;
+            }
+
+            .hero {
+                padding: 7rem 1.5rem 3rem;
+            }
+        }
+    </style>
 </head>
-<body class="index">
-  <main>
-    <header>
-      <h1>MECAMP 2026</h1>
-      <p class="subtitle">Program Sponsorship - Dukung Masa Depan Teknologi</p>
-    </header>
-    
-    <section class="sponsorship-info">
-      <p>Bergabunglah dengan kami dalam mendukung pengembangan talenta teknologi Indonesia. Pilih paket sponsorship yang sesuai dengan kebutuhan perusahaan Anda:</p>
-      
-      <nav class="links" role="navigation" aria-label="Paket Sponsorship">
-        <a href="emas/index.html" class="sponsor-link" aria-describedby="emas-desc">
-          <strong>Sponsor Emas</strong>
-          <span id="emas-desc" class="sr-only">Paket sponsorship premium dengan benefit maksimal</span>
-        </a>
-        <a href="silver/index.html" class="sponsor-link" aria-describedby="silver-desc">
-          <strong>Sponsor Silver</strong>
-          <span id="silver-desc" class="sr-only">Paket sponsorship menengah dengan benefit optimal</span>
-        </a>
-        <a href="bronze/index.html" class="sponsor-link" aria-describedby="bronze-desc">
-          <strong>Sponsor Perunggu</strong>
-          <span id="bronze-desc" class="sr-only">Paket sponsorship dasar dengan benefit essential</span>
-        </a>
-      </nav>
+<body>
+    <nav>
+        <div class="nav-container">
+            <a href="#" class="nav-logo">MECAMP 2026</a>
+            <ul class="nav-menu">
+                <li><a href="#tentang">Tentang</a></li>
+                <li><a href="#tujuan">Tujuan</a></li>
+                <li><a href="#pilar">Pilar</a></li>
+                <li><a href="#jadwal">Jadwal</a></li>
+                <li><a href="#audiens">Audiens</a></li>
+                <li><a href="#kontak">Kontak</a></li>
+                <li><a href="sponsorship.html" style="color: var(--color-accent);">Sponsorship</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <div class="hero-ornament">❋</div>
+            <h1>MECAMP-FEST 2026</h1>
+            <p class="hero-tagline">"There is No Too Big Dream For a Little Dreamers"</p>
+            <p class="hero-subtitle">Balika Cipta Niskala</p>
+            <div class="hero-date">22 – 24 Januari 2026</div>
+            <p class="hero-description">
+                Festival Edukasi, Pendidikan, Karir, dan Kewirausahaan<br>
+                <strong>Mansawangi Expo Campus · MAN 1 Banyuwangi</strong>
+            </p>
+            <a href="#tentang" class="cta-button">Jelajahi Kegiatan</a>
+        </div>
     </section>
-    
+
+    <section id="tentang">
+        <div class="section-ornament">❋</div>
+        <h2 class="section-title">Tentang MECAMP-FEST</h2>
+        <p class="section-subtitle">Menginspirasi Generasi Muda Menuju Masa Depan Gemilang</p>
+
+        <div class="about-content">
+            <div class="about-text">
+                <p>MECAMP-FEST 2026 yang diselenggarakan oleh Ikatan Alumni MAN 1 Banyuwangi merupakan Festival Edukasi, Pendidikan, Karir, dan Kewirausahaan yang menggabungkan serangkaian acara pameran informatif dan hiburan.</p>
+
+                <p>Acara ini secara spesifik dirancang untuk mengantisipasi dan menyikapi kebutuhan informasi pendidikan tinggi dan dunia kerja, dengan menghadirkan alumni yang telah berkuliah di berbagai Perguruan Tinggi Negeri/Swasta (PTN/PTS) serta yang telah sukses memasuki dunia kerja di seluruh Indonesia.</p>
+
+                <p>Sejak pertama kali diadakan pada tahun 2018 dan telah terselenggara sebanyak 5 kali, acara tahunan ini bertransformasi menjadi gelaran yang lebih besar. MECAMP-FEST 2026 tidak hanya menjadi sarana penyampaian informasi mengenai tata cara pendaftaran PTN/PTS melalui berbagai jalur serta gambaran kehidupan perkuliahan, tetapi juga dilengkapi dengan pameran seni, bazar UMKM, dan Expo Campus yang informatif. Puncak acara akan ditutup dengan hiburan konser musik yang meriah.</p>
+            </div>
+            <div class="about-image">
+                <img src="images/logo.jpeg" alt="MECAMP 2026">
+            </div>
+        </div>
+
+        <div class="stats">
+            <div class="stats-grid">
+                <div class="stat-item">
+                    <h3>3.500+</h3>
+                    <p>Peserta Diharapkan</p>
+                </div>
+                <div class="stat-item">
+                    <h3>3 Hari</h3>
+                    <p>Festival Penuh</p>
+                </div>
+                <div class="stat-item">
+                    <h3>6 Tahun</h3>
+                    <p>Pengalaman</p>
+                </div>
+                <div class="stat-item">
+                    <h3>∞</h3>
+                    <p>Inspirasi & Peluang</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="tujuan">
+        <div class="section-ornament">❋</div>
+        <h2 class="section-title">Tujuan Kegiatan</h2>
+        <p class="section-subtitle">Lima Misi Utama untuk Masa Depan Cemerlang</p>
+
+        <div class="goals-grid">
+            <div class="goal-card">
+                <div class="goal-icon">📚</div>
+                <h3>Memberikan Informasi Pendidikan</h3>
+                <p>Menyediakan informasi lengkap mengenai pendaftaran dan kehidupan di PTN/PTS melalui berbagai jalur masuk perguruan tinggi.</p>
+            </div>
+
+            <div class="goal-card">
+                <div class="goal-icon">💼</div>
+                <h3>Meningkatkan Wawasan Karir</h3>
+                <p>Membuka pandangan peserta didik tentang dunia kerja, berbagai pilihan karir, dan potensi kewirausahaan yang dapat dikembangkan.</p>
+            </div>
+
+            <div class="goal-card">
+                <div class="goal-icon">🤝</div>
+                <h3>Memperkuat Silaturahmi Alumni</h3>
+                <p>Menjadi jembatan bagi Ikatan Alumni untuk berbagi pengalaman, bersilaturahmi, dan berkontribusi kepada almamater.</p>
+            </div>
+
+            <div class="goal-card">
+                <div class="goal-icon">🎨</div>
+                <h3>Mendorong Kreativitas</h3>
+                <p>Memberi ruang promosi bagi UMKM dan pelaku seni lokal melalui Bazar dan Pameran Seni yang inspiratif.</p>
+            </div>
+
+            <div class="goal-card">
+                <div class="goal-card">
+                <div class="goal-icon">🎭</div>
+                <h3>Menciptakan Acara Edukatif & Rekreatif</h3>
+                <p>Menggabungkan Expo Campus dengan Hiburan Konser Musik untuk pengalaman belajar yang menarik dan menyenangkan.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="pilar">
+        <div class="section-ornament">❋</div>
+        <h2 class="section-title">Pilar Utama Kegiatan</h2>
+        <p class="section-subtitle">Empat Fondasi Kesuksesan MECAMP-FEST 2026</p>
+
+        <div class="pillars-grid">
+            <div class="pillar-card">
+                <div class="pillar-icon">🎓</div>
+                <h3>Edukasi</h3>
+                <p>Memberikan informasi lengkap seputar kampus, jalur masuk, dan kehidupan kuliah melalui Expo Campus dan sesi sharing alumni.</p>
+            </div>
+
+            <div class="pillar-card">
+                <div class="pillar-icon">💼</div>
+                <h3>Karir</h3>
+                <p>Membuka wawasan tentang dunia kerja dan profesi dari alumni yang sudah berkarier di berbagai bidang industri.</p>
+            </div>
+
+            <div class="pillar-card">
+                <div class="pillar-icon">🚀</div>
+                <h3>Kewirausahaan</h3>
+                <p>Mendorong semangat berbisnis dan berinovasi melalui bazar UMKM dan berbagi pengalaman pelaku usaha muda.</p>
+            </div>
+
+            <div class="pillar-card">
+                <div class="pillar-icon">🎪</div>
+                <h3>Hiburan & Seni</h3>
+                <p>Menghadirkan suasana hangat dan meriah melalui penampilan seni, musik, dan kegiatan interaktif yang menghibur.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="jadwal">
+        <div class="section-ornament">❋</div>
+        <h2 class="section-title">Jadwal Kegiatan</h2>
+        <p class="section-subtitle">Tiga Hari Penuh Inspirasi, Pembelajaran, dan Hiburan</p>
+
+        <div class="timeline">
+            <div class="timeline-item">
+                <div class="timeline-content">
+                    <h3>Try Out Akbar</h3>
+                    <p>Pelaksanaan Try Out khusus untuk siswa-siswi kelas 12 MAN 1 Banyuwangi. Kegiatan ini bertujuan melatih kesiapan akademik sebelum menghadapi ujian masuk perguruan tinggi.</p>
+                    <p><strong>Lokasi:</strong> MAN 1 Banyuwangi</p>
+                    <p><strong>Peserta:</strong> Siswa Kelas XII</p>
+                </div>
+                <div class="timeline-date">Kamis, 22 Januari 2026</div>
+            </div>
+
+            <div class="timeline-item">
+                <div class="timeline-content">
+                    <h3>Sharing Session & Expo di Sekolah</h3>
+                    <p>Pembukaan resmi MECAMP-FEST 2026 dengan sesi sharing bersama alumni sukses, expo pendidikan dari berbagai perguruan tinggi, dan diskusi interaktif seputar karir dan perkuliahan.</p>
+                    <p><strong>Narasumber:</strong> Ali Moerdani (Alumni MAN 1 Banyuwangi)</p>
+                    <p><strong>Lokasi:</strong> Aula MAN 1 Banyuwangi</p>
+                </div>
+                <div class="timeline-date">Jumat, 23 Januari 2026</div>
+            </div>
+
+            <div class="timeline-item">
+                <div class="timeline-content">
+                    <h3>Puncak MECAMP-FEST 2026</h3>
+                    <p>Acara puncak dengan rangkaian kegiatan: jalan sehat, talkshow motivasi bersama Danang Giri Sadewa, pameran universitas, bazar UMKM, pameran seni, dan ditutup dengan konser musik yang meriah!</p>
+                    <p><strong>Tema:</strong> Balika Cipta Niskala</p>
+                    <p><strong>Lokasi:</strong> Gesibu Blambangan</p>
+                </div>
+                <div class="timeline-date">Sabtu, 24 Januari 2026</div>
+            </div>
+        </div>
+    </section>
+
+    <section id="audiens">
+        <div class="section-ornament">❋</div>
+        <h2 class="section-title">Target Audiens</h2>
+        <p class="section-subtitle">Membangun Ekosistem Pendidikan Bersama</p>
+
+        <div class="audience-grid">
+            <div class="audience-card">
+                <div class="audience-number">±1.400</div>
+                <p class="audience-label">Siswa<br>MAN 1 Banyuwangi</p>
+            </div>
+
+            <div class="audience-card">
+                <div class="audience-number">80</div>
+                <p class="audience-label">Dewan Guru, Kepala Sekolah & Kepala Kemenag</p>
+            </div>
+
+            <div class="audience-card">
+                <div class="audience-number">20</div>
+                <p class="audience-label">Siswa dari Sekolah Undangan/Delegasi</p>
+            </div>
+
+            <div class="audience-card">
+                <div class="audience-number">±2.000</div>
+                <p class="audience-label">Masyarakat<br>Umum</p>
+            </div>
+        </div>
+
+        <p style="text-align: center; margin-top: 3rem; font-size: 1.3rem; color: var(--color-accent); font-weight: 600;">
+            Total Estimasi: <strong style="font-size: 1.8rem;">±3.500 Peserta</strong>
+        </p>
+    </section>
+
+    <section id="kontak">
+        <div class="section-ornament">❋</div>
+        <h2 class="section-title">Hubungi Kami</h2>
+        <p class="section-subtitle">Informasi & Media Sosial MECAMP-FEST 2026</p>
+
+        <div class="contact-info">
+            <h3 style="font-family: 'Playfair Display', serif; font-size: 2rem; margin-bottom: 2rem; color: var(--color-secondary);">Media Sosial & Kontak</h3>
+            
+            <div class="contact-grid">
+                <div class="contact-item">
+                    <div class="contact-icon">📷</div>
+                    <h3>Instagram</h3>
+                    <p><a href="https://www.instagram.com/mecamp" target="_blank">@mecamp</a></p>
+                </div>
+
+                <div class="contact-item">
+                    <div class="contact-icon">📺</div>
+                    <h3>YouTube</h3>
+                    <p><a href="https://youtube.com/@mecamp_man1bwi" target="_blank">@mecamp_man1bwi</a></p>
+                </div>
+
+                <div class="contact-item">
+                    <div class="contact-icon">✉️</div>
+                    <h3>Email</h3>
+                    <p><a href="mailto:mecampschool@man1bwi.sch.id">mecampschool@man1bwi.sch.id</a></p>
+                </div>
+            </div>
+
+            <div style="margin-top: 3rem; padding-top: 2rem; border-top: 2px solid rgba(212, 165, 116, 0.3);">
+                <h3 style="font-family: 'Playfair Display', serif; font-size: 1.5rem; margin-bottom: 1.5rem; color: var(--color-secondary);">
+                    Informasi Sponsorship & Kerjasama
+                </h3>
+                <p style="font-size: 1.1rem; margin-bottom: 1rem;">Untuk peluang sponsorship dan kerjasama, silakan kunjungi:</p>
+                <a href="sponsorship.html" style="display: inline-block; padding: 1rem 2.5rem; background: linear-gradient(135deg, var(--color-accent), var(--color-secondary)); color: var(--color-dark); text-decoration: none; border-radius: 50px; font-weight: 600; margin-top: 1rem; transition: all 0.3s ease; border: 2px solid var(--color-light);">
+                    Halaman Sponsorship
+                </a>
+            </div>
+        </div>
+    </section>
+
     <footer>
-      <p><small>&copy; 2026 MECAMP. Semua hak dilindungi.</small></p>
+        <div class="footer-content">
+            <strong>MECAMP-FEST 2026</strong>
+            <p>"There is No Too Big Dream For a Little Dreamers"</p>
+            <p style="font-style: italic; color: var(--color-accent); margin: 1rem 0;">Balika Cipta Niskala</p>
+            <p>Festival Edukasi, Pendidikan, Karir, dan Kewirausahaan</p>
+            
+            <div class="copyright">
+                <p>© 2026 Ikatan Alumni MAN 1 Banyuwangi</p>
+                <p>Mansawangi Expo Campus · MAN 1 Banyuwangi</p>
+            </div>
+        </div>
     </footer>
-  </main>
 </body>
 </html>
