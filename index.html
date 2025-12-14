@@ -13,18 +13,21 @@
         }
 
         :root {
-            --color-primary: #8B4513;
-            --color-secondary: #D4A574;
-            --color-accent: #B8860B;
-            --color-dark: #3E2723;
-            --color-light: #F5E6D3;
+            --color-primary: #43231B; /* kark */
+            --color-secondary: #8C523B; /* cocoa */
+            --color-accent: #EEAC7E; /* peach */
+            --color-dark: #3C3316; /* moss */
+            --color-light: #E9CF99; /* butter */
             --color-cream: #FFF8E7;
+            --color-sage: #8F8360; /* sage */
+            --color-text-dark: #2C1810;
+            --color-text-light: #F5F0E6;
         }
 
         body {
             font-family: 'Lora', serif;
             line-height: 1.8;
-            color: var(--color-dark);
+            color: var(--color-text-dark);
             background: var(--color-cream);
             overflow-x: hidden;
         }
@@ -49,8 +52,8 @@
             width: 100%;
             height: 100%;
             background-image: 
-                repeating-linear-gradient(45deg, transparent, transparent 10px, rgba(212, 165, 116, 0.05) 10px, rgba(212, 165, 116, 0.05) 20px),
-                repeating-linear-gradient(-45deg, transparent, transparent 10px, rgba(212, 165, 116, 0.05) 10px, rgba(212, 165, 116, 0.05) 20px);
+                repeating-linear-gradient(45deg, transparent, transparent 10px, rgba(238, 172, 126, 0.05) 10px, rgba(238, 172, 126, 0.05) 20px),
+                repeating-linear-gradient(-45deg, transparent, transparent 10px, rgba(238, 172, 126, 0.05) 10px, rgba(238, 172, 126, 0.05) 20px);
             opacity: 0.3;
             pointer-events: none;
         }
@@ -68,7 +71,7 @@
             font-family: 'Playfair Display', serif;
             font-size: 1.5rem;
             font-weight: 700;
-            color: var(--color-secondary);
+            color: var(--color-light);
             text-decoration: none;
             letter-spacing: 1px;
         }
@@ -129,7 +132,7 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background-image: url('banner.jpeg');
+            background-image: url('banner.jpg');
             background-size: cover;
             background-position: center;
             opacity: 0.2;
@@ -144,8 +147,8 @@
             width: 100%;
             height: 100%;
             background-image: 
-                repeating-linear-gradient(45deg, transparent, transparent 15px, rgba(212, 165, 116, 0.1) 15px, rgba(212, 165, 116, 0.1) 30px),
-                repeating-linear-gradient(-45deg, transparent, transparent 15px, rgba(212, 165, 116, 0.1) 15px, rgba(212, 165, 116, 0.1) 30px);
+                repeating-linear-gradient(45deg, transparent, transparent 15px, rgba(238, 172, 126, 0.1) 15px, rgba(238, 172, 126, 0.1) 30px),
+                repeating-linear-gradient(-45deg, transparent, transparent 15px, rgba(238, 172, 126, 0.1) 15px, rgba(238, 172, 126, 0.1) 30px);
             z-index: 1;
         }
 
@@ -159,7 +162,7 @@
             font-size: 3rem;
             color: var(--color-accent);
             margin-bottom: 1rem;
-            text-shadow: 0 0 20px rgba(212, 165, 116, 0.5);
+            text-shadow: 0 0 20px rgba(238, 172, 126, 0.5);
         }
 
         .hero h1 {
@@ -167,7 +170,7 @@
             font-size: clamp(2.5rem, 6vw, 4.5rem);
             font-weight: 700;
             margin-bottom: 1.5rem;
-            color: var(--color-secondary);
+            color: var(--color-light);
             text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.5);
             letter-spacing: 2px;
         }
@@ -176,7 +179,7 @@
             font-family: 'Crimson Text', serif;
             font-size: clamp(1.3rem, 3vw, 2rem);
             font-style: italic;
-            color: var(--color-light);
+            color: var(--color-accent);
             margin-bottom: 0.5rem;
             text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
         }
@@ -184,7 +187,7 @@
         .hero-subtitle {
             font-family: 'Playfair Display', serif;
             font-size: clamp(1.1rem, 2.5vw, 1.5rem);
-            color: var(--color-accent);
+            color: var(--color-light);
             margin-bottom: 2rem;
             font-weight: 600;
             letter-spacing: 3px;
@@ -194,14 +197,14 @@
         .hero-date {
             display: inline-block;
             padding: 1rem 2.5rem;
-            background: linear-gradient(135deg, rgba(139, 69, 19, 0.4), rgba(212, 165, 116, 0.4));
+            background: linear-gradient(135deg, rgba(67, 35, 27, 0.4), rgba(140, 82, 59, 0.4));
             border: 2px solid var(--color-accent);
             border-radius: 50px;
             color: var(--color-light);
             font-size: 1.3rem;
             font-weight: 600;
             margin-bottom: 1.5rem;
-            box-shadow: 0 8px 30px rgba(212, 165, 116, 0.3);
+            box-shadow: 0 8px 30px rgba(238, 172, 126, 0.3);
             backdrop-filter: blur(10px);
         }
 
@@ -215,8 +218,8 @@
         .cta-button {
             display: inline-block;
             padding: 1.2rem 3rem;
-            background: linear-gradient(135deg, var(--color-primary), var(--color-accent));
-            color: var(--color-cream);
+            background: linear-gradient(135deg, var(--color-accent), var(--color-secondary));
+            color: var(--color-dark);
             text-decoration: none;
             border-radius: 50px;
             font-weight: 600;
@@ -230,8 +233,9 @@
 
         .cta-button:hover {
             transform: translateY(-5px) scale(1.05);
-            box-shadow: 0 15px 50px rgba(212, 165, 116, 0.6);
-            background: linear-gradient(135deg, var(--color-accent), var(--color-secondary));
+            box-shadow: 0 15px 50px rgba(238, 172, 126, 0.6);
+            background: linear-gradient(135deg, var(--color-light), var(--color-accent));
+            color: var(--color-primary);
         }
 
         /* Section Styling */
@@ -272,7 +276,7 @@
 
         .section-subtitle {
             text-align: center;
-            color: #6D4C41;
+            color: var(--color-sage);
             font-size: 1.2rem;
             margin-bottom: 4rem;
             font-style: italic;
@@ -293,7 +297,7 @@
             font-size: 1.1rem;
             line-height: 2;
             text-align: justify;
-            color: var(--color-dark);
+            color: var(--color-text-dark);
         }
 
         .about-text p:first-letter {
@@ -345,7 +349,7 @@
             width: 100%;
             height: 100%;
             background-image: 
-                repeating-linear-gradient(45deg, transparent, transparent 20px, rgba(212, 165, 116, 0.05) 20px, rgba(212, 165, 116, 0.05) 40px);
+                repeating-linear-gradient(45deg, transparent, transparent 20px, rgba(238, 172, 126, 0.05) 20px, rgba(238, 172, 126, 0.05) 40px);
             opacity: 0.3;
         }
 
@@ -397,7 +401,7 @@
             right: -50%;
             width: 200%;
             height: 200%;
-            background: radial-gradient(circle, rgba(212, 165, 116, 0.1) 0%, transparent 70%);
+            background: radial-gradient(circle, rgba(238, 172, 126, 0.1) 0%, transparent 70%);
             transition: all 0.6s ease;
         }
 
@@ -427,7 +431,7 @@
         }
 
         .goal-card p {
-            color: var(--color-dark);
+            color: var(--color-text-dark);
             line-height: 1.9;
         }
 
@@ -487,7 +491,7 @@
         }
 
         .pillar-card p {
-            color: var(--color-dark);
+            color: var(--color-text-dark);
             line-height: 1.9;
         }
 
@@ -560,7 +564,7 @@
             left: 50%;
             transform: translateX(-50%);
             background: linear-gradient(135deg, var(--color-primary), var(--color-accent));
-            color: var(--color-cream);
+            color: var(--color-light);
             padding: 0.8rem 2rem;
             border-radius: 50px;
             font-weight: 700;
@@ -580,7 +584,7 @@
         }
 
         .timeline-content p {
-            color: var(--color-dark);
+            color: var(--color-text-dark);
             line-height: 1.9;
             margin-bottom: 0.8rem;
         }
@@ -622,7 +626,7 @@
         }
 
         .audience-label {
-            color: var(--color-dark);
+            color: var(--color-text-dark);
             font-size: 1.1rem;
             line-height: 1.6;
         }
@@ -651,7 +655,7 @@
             background: rgba(255, 255, 255, 0.1);
             border-radius: 15px;
             backdrop-filter: blur(10px);
-            border: 2px solid rgba(212, 165, 116, 0.3);
+            border: 2px solid rgba(238, 172, 126, 0.3);
             transition: all 0.3s ease;
         }
 
@@ -670,17 +674,18 @@
         .contact-item h3 {
             font-family: 'Playfair Display', serif;
             margin-bottom: 0.8rem;
-            color: var(--color-secondary);
+            color: var(--color-light);
         }
 
         .contact-item p, .contact-item a {
-            color: var(--color-light);
+            color: var(--color-accent);
             text-decoration: none;
             transition: color 0.3s ease;
         }
 
         .contact-item a:hover {
-            color: var(--color-accent);
+            color: var(--color-light);
+            text-decoration: underline;
         }
 
         /* Footer */
@@ -701,7 +706,7 @@
             width: 100%;
             height: 100%;
             background-image: 
-                repeating-linear-gradient(45deg, transparent, transparent 15px, rgba(212, 165, 116, 0.03) 15px, rgba(212, 165, 116, 0.03) 30px);
+                repeating-linear-gradient(45deg, transparent, transparent 15px, rgba(238, 172, 126, 0.03) 15px, rgba(238, 172, 126, 0.03) 30px);
             opacity: 0.5;
         }
 
@@ -721,13 +726,14 @@
         footer p {
             margin-bottom: 0.5rem;
             font-size: 1.05rem;
+            color: var(--color-light);
         }
 
         footer .copyright {
             margin-top: 2rem;
             padding-top: 2rem;
-            border-top: 1px solid rgba(212, 165, 116, 0.3);
-            opacity: 0.8;
+            border-top: 1px solid rgba(238, 172, 126, 0.3);
+            opacity: 0.9;
         }
 
         /* Responsive */
@@ -799,7 +805,7 @@
                 <li><a href="#jadwal">Jadwal</a></li>
                 <li><a href="#audiens">Audiens</a></li>
                 <li><a href="#kontak">Kontak</a></li>
-                <li><a href="sponsorship.html" style="color: var(--color-accent);">Sponsorship</a></li>
+                <li><a href="sponsorship.html" style="color: var(--color-accent); font-weight: 600;">Sponsorship</a></li>
             </ul>
         </div>
     </nav>
@@ -813,7 +819,7 @@
             <div class="hero-date">22 – 24 Januari 2026</div>
             <p class="hero-description">
                 Festival Edukasi, Pendidikan, Karir, dan Kewirausahaan<br>
-                <strong>Mansawangi Expo Campus · MAN 1 Banyuwangi</strong>
+                <strong style="color: var(--color-accent);">Mansawangi Expo Campus · MAN 1 Banyuwangi</strong>
             </p>
             <a href="#tentang" class="cta-button">Jelajahi Kegiatan</a>
         </div>
@@ -833,7 +839,7 @@
                 <p>Sejak pertama kali diadakan pada tahun 2018 dan telah terselenggara sebanyak 5 kali, acara tahunan ini bertransformasi menjadi gelaran yang lebih besar. MECAMP-FEST 2026 tidak hanya menjadi sarana penyampaian informasi mengenai tata cara pendaftaran PTN/PTS melalui berbagai jalur serta gambaran kehidupan perkuliahan, tetapi juga dilengkapi dengan pameran seni, bazar UMKM, dan Expo Campus yang informatif. Puncak acara akan ditutup dengan hiburan konser musik yang meriah.</p>
             </div>
             <div class="about-image">
-                <img src="images/logo.jpeg" alt="MECAMP 2026">
+                <img src="images/logo.jpg" alt="MECAMP 2026">
             </div>
         </div>
 
@@ -890,7 +896,6 @@
             </div>
 
             <div class="goal-card">
-                <div class="goal-card">
                 <div class="goal-icon">🎭</div>
                 <h3>Menciptakan Acara Edukatif & Rekreatif</h3>
                 <p>Menggabungkan Expo Campus dengan Hiburan Konser Musik untuk pengalaman belajar yang menarik dan menyenangkan.</p>
@@ -995,8 +1000,8 @@
             </div>
         </div>
 
-        <p style="text-align: center; margin-top: 3rem; font-size: 1.3rem; color: var(--color-accent); font-weight: 600;">
-            Total Estimasi: <strong style="font-size: 1.8rem;">±3.500 Peserta</strong>
+        <p style="text-align: center; margin-top: 3rem; font-size: 1.3rem; color: var(--color-primary); font-weight: 600;">
+            Total Estimasi: <strong style="font-size: 1.8rem; color: var(--color-accent);">±3.500 Peserta</strong>
         </p>
     </section>
 
@@ -1006,7 +1011,7 @@
         <p class="section-subtitle">Informasi & Media Sosial MECAMP-FEST 2026</p>
 
         <div class="contact-info">
-            <h3 style="font-family: 'Playfair Display', serif; font-size: 2rem; margin-bottom: 2rem; color: var(--color-secondary);">Media Sosial & Kontak</h3>
+            <h3 style="font-family: 'Playfair Display', serif; font-size: 2rem; margin-bottom: 2rem; color: var(--color-light);">Media Sosial & Kontak</h3>
             
             <div class="contact-grid">
                 <div class="contact-item">
@@ -1029,10 +1034,10 @@
             </div>
 
             <div style="margin-top: 3rem; padding-top: 2rem; border-top: 2px solid rgba(212, 165, 116, 0.3);">
-                <h3 style="font-family: 'Playfair Display', serif; font-size: 1.5rem; margin-bottom: 1.5rem; color: var(--color-secondary);">
+                <h3 style="font-family: 'Playfair Display', serif; font-size: 1.5rem; margin-bottom: 1.5rem; color: var(--color-light);">
                     Informasi Sponsorship & Kerjasama
                 </h3>
-                <p style="font-size: 1.1rem; margin-bottom: 1rem;">Untuk peluang sponsorship dan kerjasama, silakan kunjungi:</p>
+                <p style="font-size: 1.1rem; margin-bottom: 1rem; color: var(--color-accent);">Untuk peluang sponsorship dan kerjasama, silakan kunjungi:</p>
                 <a href="sponsorship.html" style="display: inline-block; padding: 1rem 2.5rem; background: linear-gradient(135deg, var(--color-accent), var(--color-secondary)); color: var(--color-dark); text-decoration: none; border-radius: 50px; font-weight: 600; margin-top: 1rem; transition: all 0.3s ease; border: 2px solid var(--color-light);">
                     Halaman Sponsorship
                 </a>

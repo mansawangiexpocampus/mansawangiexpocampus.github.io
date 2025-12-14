@@ -13,18 +13,21 @@
         }
 
         :root {
-            --color-primary: #8B4513;
-            --color-secondary: #D4A574;
-            --color-accent: #B8860B;
-            --color-dark: #3E2723;
-            --color-light: #F5E6D3;
+            --color-primary: #43231B;
+            --color-secondary: #8C523B;
+            --color-accent: #EEAC7E;
+            --color-dark: #3C3316;
+            --color-light: #E9CF99;
             --color-cream: #FFF8E7;
+            --color-sage: #8F8360;
+            --color-text-dark: #2C1810;
+            --color-text-light: #F5F0E6;
         }
 
         body {
             font-family: 'Lora', serif;
             line-height: 1.8;
-            color: var(--color-dark);
+            color: var(--color-text-dark);
             background: var(--color-cream);
             overflow-x: hidden;
         }
@@ -68,7 +71,7 @@
             font-family: 'Playfair Display', serif;
             font-size: 1.5rem;
             font-weight: 700;
-            color: var(--color-secondary);
+            color: var(--color-light);
             text-decoration: none;
             letter-spacing: 1px;
         }
@@ -113,7 +116,7 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background-image: url('images/dekorasi1.jpeg');
+            background-image: url('images/dekorasi1.jpg');
             background-size: cover;
             background-position: center;
             opacity: 0.15;
@@ -151,7 +154,7 @@
             font-size: clamp(2.5rem, 5vw, 4rem);
             font-weight: 700;
             margin-bottom: 1.5rem;
-            color: var(--color-secondary);
+            color: var(--color-light);
             text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.5);
             letter-spacing: 2px;
         }
@@ -160,7 +163,7 @@
             font-family: 'Crimson Text', serif;
             font-size: clamp(1.2rem, 2.5vw, 1.6rem);
             font-style: italic;
-            color: var(--color-light);
+            color: var(--color-accent);
             margin-bottom: 1.5rem;
             line-height: 1.8;
         }
@@ -203,7 +206,7 @@
 
         .section-subtitle {
             text-align: center;
-            color: #6D4C41;
+            color: var(--color-sage);
             font-size: 1.2rem;
             margin-bottom: 3rem;
             font-style: italic;
@@ -215,7 +218,7 @@
             line-height: 2;
             margin-bottom: 2rem;
             text-align: justify;
-            color: var(--color-dark);
+            color: var(--color-text-dark);
         }
 
         .content-text:first-letter {
@@ -285,7 +288,7 @@
         }
 
         .benefit-card p {
-            color: var(--color-dark);
+            color: var(--color-text-dark);
             line-height: 1.9;
         }
 
@@ -332,6 +335,7 @@
             line-height: 2;
             margin-bottom: 1rem;
             text-align: center;
+            color: var(--color-light);
         }
 
         .highlight-box ul {
@@ -345,6 +349,7 @@
             font-size: 1.1rem;
             position: relative;
             padding-left: 2rem;
+            color: var(--color-light);
         }
 
         .highlight-box li::before {
@@ -357,6 +362,11 @@
 
         .highlight-box li:last-child {
             border-bottom: none;
+        }
+
+        .highlight-box strong {
+            color: var(--color-accent);
+            font-weight: 600;
         }
 
         /* Stats Grid */
@@ -392,7 +402,7 @@
         }
 
         .stat-label {
-            color: var(--color-dark);
+            color: var(--color-text-dark);
             font-size: 1.05rem;
         }
 
@@ -438,6 +448,7 @@
             font-size: 1.2rem;
             margin-bottom: 2.5rem;
             line-height: 1.9;
+            color: var(--color-light);
         }
 
         .contact-persons {
@@ -472,7 +483,7 @@
             font-family: 'Playfair Display', serif;
             font-size: 1.5rem;
             margin-bottom: 0.5rem;
-            color: var(--color-secondary);
+            color: var(--color-light);
             font-weight: 600;
         }
 
@@ -486,7 +497,7 @@
         .contact-phone {
             font-size: 1.2rem;
             font-weight: 600;
-            color: var(--color-light);
+            color: var(--color-accent);
         }
 
         .contact-phone a {
@@ -496,7 +507,8 @@
         }
 
         .contact-phone a:hover {
-            color: var(--color-secondary);
+            color: var(--color-light);
+            text-decoration: underline;
         }
 
         /* CTA Button */
@@ -520,6 +532,7 @@
         .cta-button:hover {
             transform: translateY(-5px) scale(1.05);
             box-shadow: 0 15px 50px rgba(212, 165, 116, 0.6);
+            background: linear-gradient(135deg, var(--color-light), var(--color-accent));
         }
 
         /* Footer */
@@ -559,6 +572,82 @@
 
         footer p {
             margin-bottom: 0.5rem;
+            color: var(--color-light);
+        }
+
+        /* Special Highlight Box */
+        .special-highlight {
+            background: linear-gradient(135deg, var(--color-accent), var(--color-light));
+            color: var(--color-dark);
+            padding: 3rem;
+            border-radius: 20px;
+            margin: 4rem 0;
+            box-shadow: 0 20px 60px rgba(139, 69, 19, 0.3);
+            border: 3px solid var(--color-secondary);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .special-highlight::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: 
+                repeating-linear-gradient(45deg, transparent, transparent 20px, rgba(67, 35, 27, 0.05) 20px, rgba(67, 35, 27, 0.05) 40px);
+            opacity: 0.3;
+        }
+
+        .special-highlight .content {
+            position: relative;
+            z-index: 1;
+        }
+
+        .special-highlight h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2rem;
+            margin-bottom: 1.5rem;
+            color: var(--color-primary);
+            text-align: center;
+        }
+
+        .special-highlight p {
+            font-size: 1.15rem;
+            line-height: 2;
+            margin-bottom: 1rem;
+            text-align: center;
+            color: var(--color-primary);
+            font-style: italic;
+            font-weight: 500;
+        }
+
+        /* Social Media Links */
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            flex-wrap: wrap;
+            margin-top: 2rem;
+        }
+
+        .social-link {
+            color: var(--color-accent);
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.1rem;
+            transition: all 0.3s ease;
+            padding: 0.5rem 1rem;
+            border-radius: 10px;
+            background: rgba(212, 165, 116, 0.1);
+            border: 1px solid rgba(212, 165, 116, 0.3);
+        }
+
+        .social-link:hover {
+            color: var(--color-light);
+            background: var(--color-accent);
+            transform: translateY(-3px);
         }
 
         /* Responsive */
@@ -796,10 +885,10 @@
             Kami percaya bahwa kerjasama yang baik adalah yang dibangun atas dasar saling percaya, saling menghormati, dan saling memberikan nilai. Mari bersama-sama menciptakan acara yang tidak hanya berhasil, tetapi juga bermakna dan berdampak jangka panjang.
         </p>
 
-        <div class="highlight-box" style="background: linear-gradient(135deg, var(--color-accent), var(--color-secondary));">
+        <div class="special-highlight">
             <div class="content">
-                <h3 style="color: var(--color-dark);">"There is No Too Big Dream For a Little Dreamers"</h3>
-                <p style="color: var(--color-dark); font-size: 1.2rem; font-style: italic; margin-top: 1rem;">
+                <h3>"There is No Too Big Dream For a Little Dreamers"</h3>
+                <p>
                     Bersama kita wujudkan impian besar untuk generasi yang lebih cerah
                 </p>
             </div>
@@ -847,14 +936,14 @@
         </div>
 
         <div style="margin-top: 3rem; text-align: center;">
-            <p style="font-size: 1.15rem; color: var(--color-dark); margin-bottom: 1.5rem;">
+            <p style="font-size: 1.15rem; color: var(--color-text-dark); margin-bottom: 1.5rem;">
                 Atau kunjungi media sosial kami untuk informasi terkini:
             </p>
-            <div style="display: flex; justify-content: center; gap: 2rem; flex-wrap: wrap;">
-                <a href="https://www.instagram.com/mecamp" target="_blank" style="color: var(--color-accent); text-decoration: none; font-weight: 600; font-size: 1.1rem; transition: all 0.3s ease;">
+            <div class="social-links">
+                <a href="https://www.instagram.com/mecamp" target="_blank" class="social-link">
                     📷 @mecamp
                 </a>
-                <a href="https://youtube.com/@mecamp_man1bwi" target="_blank" style="color: var(--color-accent); text-decoration: none; font-weight: 600; font-size: 1.1rem; transition: all 0.3s ease;">
+                <a href="https://youtube.com/@mecamp_man1bwi" target="_blank" class="social-link">
                     📺 @mecamp_man1bwi
                 </a>
             </div>
@@ -869,7 +958,7 @@
             <p>Festival Edukasi, Pendidikan, Karir, dan Kewirausahaan</p>
             <p style="margin-top: 1rem;">22 – 24 Januari 2026 · Gesibu Blambangan</p>
             
-            <div style="margin-top: 2rem; padding-top: 2rem; border-top: 1px solid rgba(212, 165, 116, 0.3); opacity: 0.8;">
+            <div style="margin-top: 2rem; padding-top: 2rem; border-top: 1px solid rgba(212, 165, 116, 0.3); opacity: 0.9;">
                 <p>© 2026 Ikatan Alumni MAN 1 Banyuwangi</p>
                 <p>Mansawangi Expo Campus · MAN 1 Banyuwangi</p>
             </div>
