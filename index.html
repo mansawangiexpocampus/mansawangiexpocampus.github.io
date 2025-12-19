@@ -3,1240 +3,686 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MECAMP-FEST 2026 | Festival Edukasi & Karir MAN 1 Banyuwangi</title>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700;800&family=Lora:wght@400;500;600&family=Crimson+Text:wght@400;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        :root {
-            --color-primary: #43231B;
-            --color-secondary: #8C523B;
-            --color-accent: #EEAC7E;
-            --color-dark: #3C3316;
-            --color-light: #E9CF99;
-            --color-cream: #FFF8E7;
-            --color-sage: #8F8360;
-            --color-text-dark: #2C1810;
-            --color-text-light: #F5F0E6;
-            --shadow-sm: 0 2px 8px rgba(67, 35, 27, 0.08);
-            --shadow-md: 0 4px 20px rgba(67, 35, 27, 0.12);
-            --shadow-lg: 0 10px 40px rgba(67, 35, 27, 0.15);
-            --shadow-xl: 0 20px 60px rgba(67, 35, 27, 0.2);
-        }
-
-        html {
-            scroll-behavior: smooth;
-        }
-
-        body {
-            font-family: 'Lora', serif;
-            line-height: 1.8;
-            color: var(--color-text-dark);
-            background: var(--color-cream);
-            overflow-x: hidden;
-        }
-
-        /* ============ NAVIGATION ============ */
-        nav {
-            position: fixed;
-            top: 0;
-            width: 100%;
-            background: linear-gradient(135deg, rgba(67, 35, 27, 0.98), rgba(140, 82, 59, 0.96));
-            padding: 1.2rem 0;
-            box-shadow: 0 4px 24px rgba(0, 0, 0, 0.25);
-            z-index: 1000;
-            border-bottom: 2px solid var(--color-accent);
-            backdrop-filter: blur(10px);
-            transition: all 0.3s ease;
-        }
-
-        nav.scrolled {
-            padding: 0.8rem 0;
-            box-shadow: 0 6px 30px rgba(0, 0, 0, 0.3);
-        }
-
-        .nav-container {
-            max-width: 1280px;
-            margin: 0 auto;
-            padding: 0 2rem;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .nav-logo {
-            font-family: 'Playfair Display', serif;
-            font-size: 1.6rem;
-            font-weight: 800;
-            color: var(--color-light);
-            text-decoration: none;
-            letter-spacing: 0.5px;
-            transition: all 0.3s ease;
-        }
-
-        .nav-logo:hover {
-            color: var(--color-accent);
-            transform: scale(1.05);
-        }
-
-        .nav-menu {
-            display: flex;
-            list-style: none;
-            gap: 2rem;
-            align-items: center;
-        }
-
-        .nav-menu a {
-            color: var(--color-light);
-            text-decoration: none;
-            font-weight: 500;
-            font-size: 0.95rem;
-            transition: all 0.3s ease;
-            position: relative;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-            padding: 0.5rem 0;
-        }
-
-        .nav-menu a::after {
-            content: '';
-            position: absolute;
-            bottom: 0;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 0;
-            height: 2px;
-            background: var(--color-accent);
-            transition: width 0.3s ease;
-        }
-
-        .nav-menu a:hover {
-            color: var(--color-accent);
-        }
-
-        .nav-menu a:hover::after {
-            width: 100%;
-        }
-
-        .nav-menu .nav-cta {
-            background: linear-gradient(135deg, var(--color-accent), var(--color-light));
-            color: var(--color-dark);
-            padding: 0.7rem 1.5rem;
-            border-radius: 25px;
-            font-weight: 600;
-            box-shadow: 0 4px 15px rgba(238, 172, 126, 0.3);
-        }
-
-        .nav-menu .nav-cta::after {
-            display: none;
-        }
-
-        .nav-menu .nav-cta:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 6px 20px rgba(238, 172, 126, 0.4);
-        }
-
-        /* ============ HERO SECTION ============ */
-        .hero {
-            min-height: 100vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-            padding: 10rem 2rem 6rem;
-            background: linear-gradient(135deg, #2C1810 0%, var(--color-dark) 50%, #5D4037 100%);
-            position: relative;
-            overflow: hidden;
-        }
-
-        .hero::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-image: url('images/banner.jpg');
-            background-size: cover;
-            background-position: center;
-            opacity: 0.15;
-            z-index: 0;
-        }
-
-        .hero::after {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: 
-                radial-gradient(circle at 20% 30%, rgba(238, 172, 126, 0.15) 0%, transparent 50%),
-                radial-gradient(circle at 80% 70%, rgba(233, 207, 153, 0.15) 0%, transparent 50%);
-            z-index: 1;
-        }
-
-        .hero-content {
-            position: relative;
-            z-index: 2;
-            max-width: 1000px;
-            animation: fadeInUp 1s ease-out;
-        }
-
-        @keyframes fadeInUp {
-            from {
-                opacity: 0;
-                transform: translateY(30px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        .hero-ornament {
-            font-size: 3.5rem;
-            color: var(--color-accent);
-            margin-bottom: 1.5rem;
-            text-shadow: 0 0 30px rgba(238, 172, 126, 0.6);
-            animation: pulse 2s ease-in-out infinite;
-        }
-
-        @keyframes pulse {
-            0%, 100% { transform: scale(1); opacity: 1; }
-            50% { transform: scale(1.1); opacity: 0.8; }
-        }
-
-        .hero h1 {
-            font-family: 'Playfair Display', serif;
-            font-size: clamp(3rem, 7vw, 5rem);
-            font-weight: 800;
-            margin-bottom: 1.5rem;
-            color: var(--color-light);
-            text-shadow: 
-                0 2px 10px rgba(0, 0, 0, 0.5),
-                0 0 40px rgba(238, 172, 126, 0.3);
-            letter-spacing: 1px;
-            line-height: 1.2;
-        }
-
-        .hero-tagline {
-            font-family: 'Crimson Text', serif;
-            font-size: clamp(1.4rem, 3vw, 2.2rem);
-            font-style: italic;
-            color: var(--color-accent);
-            margin-bottom: 1rem;
-            text-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
-            font-weight: 600;
-        }
-
-        .hero-subtitle {
-            font-family: 'Playfair Display', serif;
-            font-size: clamp(1.2rem, 2.5vw, 1.8rem);
-            color: var(--color-light);
-            margin-bottom: 2.5rem;
-            font-weight: 600;
-            letter-spacing: 4px;
-            text-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
-            text-transform: uppercase;
-        }
-
-        .hero-date {
-            display: inline-block;
-            padding: 1.2rem 3rem;
-            background: linear-gradient(135deg, rgba(238, 172, 126, 0.2), rgba(233, 207, 153, 0.2));
-            border: 2px solid var(--color-accent);
-            border-radius: 50px;
-            color: var(--color-light);
-            font-size: 1.4rem;
-            font-weight: 700;
-            margin-bottom: 2rem;
-            box-shadow: 0 8px 30px rgba(238, 172, 126, 0.3);
-            backdrop-filter: blur(15px);
-            letter-spacing: 1px;
-        }
-
-        .hero-description {
-            font-size: 1.25rem;
-            color: var(--color-light);
-            margin-bottom: 3rem;
-            line-height: 2;
-            max-width: 800px;
-            margin-left: auto;
-            margin-right: auto;
-        }
-
-        .hero-description strong {
-            color: var(--color-accent);
-            font-weight: 700;
-        }
-
-        .cta-button {
-            display: inline-block;
-            padding: 1.3rem 3.5rem;
-            background: linear-gradient(135deg, var(--color-accent), var(--color-light));
-            color: var(--color-dark);
-            text-decoration: none;
-            border-radius: 50px;
-            font-weight: 700;
-            font-size: 1.15rem;
-            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-            box-shadow: 0 10px 40px rgba(238, 172, 126, 0.4);
-            border: 2px solid transparent;
-            text-transform: uppercase;
-            letter-spacing: 1.5px;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .cta-button::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: -100%;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
-            transition: left 0.6s ease;
-        }
-
-        .cta-button:hover::before {
-            left: 100%;
-        }
-
-        .cta-button:hover {
-            transform: translateY(-5px) scale(1.05);
-            box-shadow: 0 15px 50px rgba(238, 172, 126, 0.5);
-            background: linear-gradient(135deg, var(--color-light), #FFF);
-        }
-
-        /* ============ SECTION STYLING ============ */
-        section {
-            padding: 6rem 2rem;
-            max-width: 1280px;
-            margin: 0 auto;
-        }
-
-        .section-ornament {
-            text-align: center;
-            font-size: 2.5rem;
-            color: var(--color-accent);
-            margin-bottom: 1rem;
-        }
-
-        .section-title {
-            font-family: 'Playfair Display', serif;
-            font-size: clamp(2.5rem, 5vw, 3.8rem);
-            text-align: center;
-            margin-bottom: 1.5rem;
-            color: var(--color-primary);
-            position: relative;
-            padding-bottom: 2rem;
-            font-weight: 800;
-            letter-spacing: 0.5px;
-        }
-
-        .section-title::after {
-            content: '';
-            position: absolute;
-            bottom: 0;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 100px;
-            height: 4px;
-            background: linear-gradient(90deg, transparent, var(--color-accent), transparent);
-            border-radius: 2px;
-        }
-
-        .section-subtitle {
-            text-align: center;
-            color: var(--color-sage);
-            font-size: 1.25rem;
-            margin-bottom: 4rem;
-            font-style: italic;
-            font-family: 'Crimson Text', serif;
-            font-weight: 600;
-        }
-
-        /* ============ ABOUT SECTION ============ */
-        .about-content {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 5rem;
-            align-items: center;
-            margin-top: 4rem;
-        }
-
-        .about-text p {
-            margin-bottom: 2rem;
-            font-size: 1.15rem;
-            line-height: 2;
-            text-align: justify;
-            color: var(--color-text-dark);
-        }
-
-        .about-text p:first-letter {
-            font-size: 4rem;
-            font-weight: 800;
-            color: var(--color-accent);
-            float: left;
-            line-height: 0.9;
-            margin-right: 0.7rem;
-            margin-top: 0.3rem;
-            font-family: 'Playfair Display', serif;
-        }
-
-        .about-image {
-            height: 500px;
-            border-radius: 25px;
-            overflow: hidden;
-            box-shadow: var(--shadow-xl);
-            border: 3px solid var(--color-accent);
-            position: relative;
-            transform: rotate(2deg);
-            transition: all 0.5s ease;
-        }
-
-        .about-image:hover {
-            transform: rotate(0deg) scale(1.02);
-            box-shadow: 0 25px 70px rgba(67, 35, 27, 0.25);
-        }
-
-        .about-image img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            transition: transform 0.5s ease;
-        }
-
-        .about-image:hover img {
-            transform: scale(1.1);
-        }
-
-        /* ============ STATS ============ */
-        .stats {
-            background: linear-gradient(135deg, var(--color-dark), var(--color-primary));
-            padding: 5rem 4rem;
-            border-radius: 30px;
-            margin: 5rem 0;
-            box-shadow: var(--shadow-xl);
-            border: 3px solid var(--color-accent);
-            position: relative;
-            overflow: hidden;
-        }
-
-        .stats::before {
-            content: '';
-            position: absolute;
-            top: -50%;
-            right: -50%;
-            width: 200%;
-            height: 200%;
-            background: radial-gradient(circle, rgba(238, 172, 126, 0.1) 0%, transparent 70%);
-            animation: rotate 20s linear infinite;
-        }
-
-        @keyframes rotate {
-            from { transform: rotate(0deg); }
-            to { transform: rotate(360deg); }
-        }
-
-        .stats-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-            gap: 3rem;
-            text-align: center;
-            position: relative;
-            z-index: 1;
-        }
-
-        .stat-item {
-            padding: 2rem;
-            background: rgba(255, 255, 255, 0.05);
-            border-radius: 20px;
-            backdrop-filter: blur(10px);
-            border: 2px solid rgba(238, 172, 126, 0.2);
-            transition: all 0.4s ease;
-        }
-
-        .stat-item:hover {
-            background: rgba(255, 255, 255, 0.1);
-            border-color: var(--color-accent);
-            transform: translateY(-10px);
-        }
-
-        .stat-item h3 {
-            font-family: 'Playfair Display', serif;
-            font-size: 4rem;
-            margin-bottom: 0.8rem;
-            color: var(--color-accent);
-            font-weight: 800;
-            text-shadow: 0 0 20px rgba(238, 172, 126, 0.5);
-        }
-
-        .stat-item p {
-            font-size: 1.2rem;
-            color: var(--color-light);
-            font-weight: 500;
-        }
-
-        /* ============ GOALS/PILLARS GRID ============ */
-        .goals-grid,
-        .pillars-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2.5rem;
-            margin-top: 4rem;
-        }
-
-        .goal-card,
-        .pillar-card {
-            background: linear-gradient(145deg, #FFFFFF, var(--color-cream));
-            padding: 3rem;
-            border-radius: 25px;
-            box-shadow: var(--shadow-md);
-            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-            border: 2px solid rgba(238, 172, 126, 0.2);
-            position: relative;
-            overflow: hidden;
-        }
-
-        .goal-card::before,
-        .pillar-card::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(135deg, rgba(238, 172, 126, 0.1) 0%, transparent 50%);
-            opacity: 0;
-            transition: opacity 0.4s ease;
-        }
-
-        .goal-card:hover::before,
-        .pillar-card:hover::before {
-            opacity: 1;
-        }
-
-        .goal-card:hover,
-        .pillar-card:hover {
-            transform: translateY(-12px);
-            box-shadow: var(--shadow-xl);
-            border-color: var(--color-accent);
-        }
-
-        .goal-icon,
-        .pillar-icon {
-            font-size: 3.5rem;
-            margin-bottom: 1.5rem;
-            display: block;
-            color: var(--color-accent);
-            transition: transform 0.4s ease;
-        }
-
-        .goal-card:hover .goal-icon,
-        .pillar-card:hover .pillar-icon {
-            transform: scale(1.2) rotate(10deg);
-        }
-
-        .goal-card h3,
-        .pillar-card h3 {
-            font-family: 'Playfair Display', serif;
-            color: var(--color-primary);
-            margin-bottom: 1.2rem;
-            font-size: 1.6rem;
-            font-weight: 700;
-            line-height: 1.4;
-        }
-
-        .goal-card p,
-        .pillar-card p {
-            color: var(--color-text-dark);
-            line-height: 1.9;
-            font-size: 1.05rem;
-        }
-
-        /* ============ TIMELINE ============ */
-        .timeline {
-            position: relative;
-            padding: 4rem 0;
-            margin-top: 4rem;
-        }
-
-        .timeline::before {
-            content: '';
-            position: absolute;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 4px;
-            height: 100%;
-            background: linear-gradient(180deg, var(--color-accent), var(--color-secondary), var(--color-accent));
-            border-radius: 2px;
-        }
-
-        .timeline-item {
-            display: flex;
-            margin-bottom: 5rem;
-            position: relative;
-            align-items: center;
-        }
-
-        .timeline-item:nth-child(odd) {
-            flex-direction: row-reverse;
-        }
-
-        .timeline-content {
-            width: 45%;
-            background: linear-gradient(145deg, #FFFFFF, var(--color-cream));
-            padding: 3rem;
-            border-radius: 25px;
-            box-shadow: var(--shadow-lg);
-            border: 2px solid rgba(238, 172, 126, 0.3);
-            transition: all 0.4s ease;
-            position: relative;
-        }
-
-        .timeline-content::before {
-            content: '';
-            position: absolute;
-            top: 30px;
-            width: 20px;
-            height: 20px;
-            background: var(--color-accent);
-            border-radius: 50%;
-            box-shadow: 
-                0 0 0 5px var(--color-cream), 
-                0 0 0 10px var(--color-accent);
-            z-index: 10;
-        }
-
-        .timeline-item:nth-child(odd) .timeline-content::before {
-            left: -60px;
-        }
-
-        .timeline-item:nth-child(even) .timeline-content::before {
-            right: -60px;
-        }
-
-        .timeline-content:hover {
-            transform: scale(1.03);
-            box-shadow: var(--shadow-xl);
-            border-color: var(--color-accent);
-        }
-
-        .timeline-date {
-            position: absolute;
-            left: 50%;
-            transform: translateX(-50%);
-            background: linear-gradient(135deg, var(--color-accent), var(--color-light));
-            color: var(--color-dark);
-            padding: 1rem 2.5rem;
-            border-radius: 50px;
-            font-weight: 800;
-            white-space: nowrap;
-            box-shadow: 0 6px 25px rgba(238, 172, 126, 0.4);
-            border: 2px solid var(--color-cream);
-            z-index: 10;
-            font-family: 'Playfair Display', serif;
-            font-size: 1.05rem;
-        }
-
-        .timeline-content h3 {
-            font-family: 'Playfair Display', serif;
-            color: var(--color-primary);
-            margin-bottom: 1.2rem;
-            font-size: 1.8rem;
-            font-weight: 700;
-        }
-
-        .timeline-content p {
-            color: var(--color-text-dark);
-            line-height: 2;
-            margin-bottom: 1rem;
-            font-size: 1.05rem;
-        }
-
-        .timeline-content strong {
-            color: var(--color-accent);
-            font-weight: 700;
-        }
-
-        /* ============ AUDIENCE ============ */
-        .audience-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-            gap: 2.5rem;
-            margin-top: 4rem;
-        }
-
-        .audience-card {
-            background: linear-gradient(145deg, #FFFFFF, var(--color-cream));
-            padding: 2.5rem;
-            border-radius: 20px;
-            box-shadow: var(--shadow-md);
-            text-align: center;
-            border: 2px solid rgba(238, 172, 126, 0.2);
-            transition: all 0.4s ease;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .audience-card::after {
-            content: '';
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            width: 100%;
-            height: 5px;
-            background: linear-gradient(90deg, var(--color-accent), var(--color-light));
-            transform: scaleX(0);
-            transition: transform 0.4s ease;
-        }
-
-        .audience-card:hover::after {
-            transform: scaleX(1);
-        }
-
-        .audience-card:hover {
-            transform: translateY(-10px);
-            box-shadow: var(--shadow-xl);
-            border-color: var(--color-accent);
-        }
-
-        .audience-number {
-            font-family: 'Playfair Display', serif;
-            font-size: 3.5rem;
-            color: var(--color-accent);
-            font-weight: 800;
-            margin-bottom: 1rem;
-            text-shadow: 0 2px 10px rgba(238, 172, 126, 0.3);
-        }
-
-        .audience-label {
-            color: var(--color-text-dark);
-            font-size: 1.15rem;
-            line-height: 1.7;
-            font-weight: 500;
-        }
-
-        /* ============ CONTACT ============ */
-        .contact-info {
-            background: linear-gradient(135deg, var(--color-dark), var(--color-primary));
-            padding: 5rem 4rem;
-            border-radius: 30px;
-            text-align: center;
-            color: var(--color-light);
-            margin-top: 4rem;
-            box-shadow: var(--shadow-xl);
-            border: 3px solid var(--color-accent);
-            position: relative;
-            overflow: hidden;
-        }
-
-        .contact-info::before {
-            content: '';
-            position: absolute;
-            top: -50%;
-            left: -50%;
-            width: 200%;
-            height: 200%;
-            background: radial-gradient(circle, rgba(238, 172, 126, 0.1) 0%, transparent 70%);
-            animation: rotate 20s linear infinite;
-        }
-
-        .contact-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 2.5rem;
-            margin-top: 3rem;
-            position: relative;
-            z-index: 1;
-        }
-
-        .contact-item {
-            padding: 2.5rem 2rem;
-            background: rgba(255, 255, 255, 0.08);
-            border-radius: 20px;
-            backdrop-filter: blur(15px);
-            border: 2px solid rgba(238, 172, 126, 0.25);
-            transition: all 0.4s ease;
-        }
-
-        .contact-item:hover {
-            background: rgba(255, 255, 255, 0.12);
-            border-color: var(--color-accent);
-            transform: translateY(-8px);
-        }
-
-        .contact-icon {
-            font-size: 3rem;
-            color: var(--color-accent);
-            margin-bottom: 1.5rem;
-        }
-
-        .contact-item h3 {
-            font-family: 'Playfair Display', serif;
-            margin-bottom: 1rem;
-            color: var(--color-light);
-            font-size: 1.4rem;
-            font-weight: 700;
-        }
-
-        .contact-item p,
-        .contact-item a {
-            color: var(--color-accent);
-            text-decoration: none;
-            transition: all 0.3s ease;
-            font-size: 1.1rem;
-            font-weight: 500;
-        }
-
-        .contact-item a:hover {
-            color: var(--color-light);
-            text-decoration: underline;
-        }
-
-        .contact-desc {
-            margin-top: 0.5rem;
-            font-size: 0.95rem !important;
-            color: var(--color-light) !important;
-            opacity: 0.8;
-        }
-
-        /* ============ FOOTER ============ */
-        footer {
-            background: linear-gradient(135deg, var(--color-dark), #2C1810);
-            color: var(--color-light);
-            text-align: center;
-            padding: 4rem 2rem;
-            border-top: 4px solid var(--color-accent);
-            position: relative;
-        }
-
-        footer strong {
-            font-family: 'Playfair Display', serif;
-            color: var(--color-accent);
-            font-size: 1.8rem;
-            display: block;
-            margin-bottom: 1rem;
-            font-weight: 800;
-        }
-
-        footer p {
-            margin-bottom: 0.7rem;
-            font-size: 1.1rem;
-            color: var(--color-light);
-        }
-
-        footer .copyright {
-            margin-top: 2.5rem;
-            padding-top: 2.5rem;
-            border-top: 1px solid rgba(238, 172, 126, 0.3);
-            opacity: 0.9;
-        }
-
-        /* ============ RESPONSIVE ============ */
-        @media (max-width: 1024px) {
-            .nav-menu {
-                gap: 1.5rem;
-            }
-
-            .nav-menu a {
-                font-size: 0.9rem;
-            }
-
-            .about-content {
-                grid-template-columns: 1fr;
-                gap: 3rem;
-            }
-
-            .about-image {
-                height: 400px;
-                transform: rotate(0);
-            }
-        }
-
-        @media (max-width: 768px) {
-            .nav-container {
-                flex-direction: column;
-                gap: 1.5rem;
-            }
-
-            .nav-menu {
-                flex-wrap: wrap;
-                justify-content: center;
-                gap: 1rem;
-            }
-
-            section {
-                padding: 4rem 1.5rem;
-            }
-
-            .hero {
-                padding: 8rem 1.5rem 4rem;
-            }
-
-            .timeline::before {
-                left: 30px;
-            }
-
-            .timeline-item {
-                flex-direction: column !important;
-                padding-left: 70px;
-                align-items: flex-start;
-            }
-
-            .timeline-content {
-                width: 100%;
-            }
-
-            .timeline-content::before {
-                left: -60px !important;
-                right: auto !important;
-            }
-
-            .timeline-date {
-                left: 30px;
-                transform: translateX(0);
-                font-size: 0.9rem;
-                padding: 0.8rem 1.5rem;
-            }
-
-            .stats {
-                padding: 3rem 2rem;
-            }
-
-            .contact-info {
-                padding: 3rem 2rem;
-            }
-        }
-
-        @media (max-width: 480px) {
-            .hero h1 {
-                font-size: 2.5rem;
-            }
-
-            .section-title {
-                font-size: 2rem;
-            }
-
-            .goals-grid,
-            .pillars-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .stat-item h3 {
-                font-size: 3rem;
-            }
-
-            .audience-number {
-                font-size: 2.8rem;
-            }
-        }
-    </style>
+    <meta name="description" content="MECAMP-FEST 2026 - Festival Expo Campus MAN 1 Banyuwangi. Pameran edukasi, karir, dan kewirausahaan terbesar di Banyuwangi.">
+    <meta name="keywords" content="MECAMP-FEST, MAN 1 Banyuwangi, Expo Campus, Festival Pendidikan, Banyuwangi">
+    <meta name="author" content="Ikatan Alumni MAN 1 Banyuwangi">
+    <title>MECAMP-FEST 2026 - Festival Expo Campus MAN 1 Banyuwangi</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 </head>
 <body>
-    <nav id="navbar">
+    <!-- Header Section -->
+    <header id="header">
+        <div class="header-overlay"></div>
+        <div class="container">
+            <div class="header-content">
+                <div class="logo-section">
+                    <div class="logo-wrapper">
+                        <img src="images/logo.jpg" alt="Logo MECAMP-FEST 2026" class="logo">
+                    </div>
+                </div>
+                <div class="header-text">
+                    <h1 class="main-title">MECAMP-FEST 2026</h1>
+                    <p class="tagline">"There is No Too Big Dream For a Little Dreamers"</p>
+                    <div class="event-info">
+                        <div class="event-date">
+                            <span class="date-icon">📅</span>
+                            <span>22 - 24 Januari 2026</span>
+                        </div>
+                        <div class="event-location">
+                            <span class="location-icon">📍</span>
+                            <span>Gesibu Blambangan</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Navigation -->
+    <nav id="navbar" class="navbar">
         <div class="nav-container">
-            <a href="#" class="nav-logo">MECAMP 2026</a>
-            <ul class="nav-menu">
-                <li><a href="#tentang">Tentang</a></li>
-                <li><a href="#tujuan">Tujuan</a></li>
-                <li><a href="#pilar">Pilar</a></li>
-                <li><a href="#jadwal">Jadwal</a></li>
-                <li><a href="#audiens">Audiens</a></li>
-                <li><a href="#kontak">Kontak</a></li>
-                <li><a href="sponsorship.html" class="nav-cta">Sponsorship</a></li>
+            <button class="mobile-menu-btn" onclick="toggleMenu()" aria-label="Toggle navigation menu">
+                <span class="menu-icon" id="menuIcon">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </span>
+                <span class="menu-text">Menu</span>
+            </button>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="#tentang" class="nav-link">Tentang</a></li>
+                <li><a href="#tujuan" class="nav-link">Tujuan</a></li>
+                <li><a href="#jadwal" class="nav-link">Jadwal</a></li>
+                <li><a href="#tenant" class="nav-link">Tenant</a></li>
+                <li><a href="#audiens" class="nav-link">Audiens</a></li>
+                <li><a href="#panitia" class="nav-link">Panitia</a></li>
+                <li><a href="#kontak" class="nav-link">Kontak</a></li>
             </ul>
         </div>
     </nav>
 
-    <section class="hero" id="home">
-        <div class="hero-content">
-            <div class="hero-ornament">❋</div>
-            <h1>MECAMP-FEST 2026</h1>
-            <p class="hero-tagline">"There is No Too Big Dream For a Little Dreamers"</p>
-            <p class="hero-subtitle">Balika Cipta Niskala</p>
-            <div class="hero-date">22 – 24 Januari 2026</div>
-            <p class="hero-description">
-                Festival Edukasi, Pendidikan, Karir, dan Kewirausahaan<br>
-                <strong>Mansawangi Expo Campus · MAN 1 Banyuwangi</strong>
-            </p>
-            <a href="#tentang" class="cta-button">Jelajahi Kegiatan</a>
-        </div>
-    </section>
-
-    <section id="tentang">
-        <div class="section-ornament">❋</div>
-        <h2 class="section-title">Tentang MECAMP-FEST</h2>
-        <p class="section-subtitle">Menginspirasi Generasi Muda Menuju Masa Depan Gemilang</p>
-
-        <div class="about-content">
-            <div class="about-text">
-                <p>MECAMP-FEST 2026 yang diselenggarakan oleh Ikatan Alumni MAN 1 Banyuwangi merupakan Festival Edukasi, Pendidikan, Karir, dan Kewirausahaan yang menggabungkan serangkaian acara pameran informatif dan hiburan.</p>
-
-                <p>Acara ini secara spesifik dirancang untuk mengantisipasi dan menyikapi kebutuhan informasi pendidikan tinggi dan dunia kerja, dengan menghadirkan alumni yang telah berkuliah di berbagai Perguruan Tinggi Negeri/Swasta (PTN/PTS) serta yang telah sukses memasuki dunia kerja di seluruh Indonesia.</p>
-
-                <p>Sejak pertama kali diadakan pada tahun 2018 dan telah terselenggara sebanyak 5 kali, acara tahunan ini bertransformasi menjadi gelaran yang lebih besar. MECAMP-FEST 2026 tidak hanya menjadi sarana penyampaian informasi mengenai tata cara pendaftaran PTN/PTS melalui berbagai jalur serta gambaran kehidupan perkuliahan, tetapi juga dilengkapi dengan pameran seni, bazar UMKM, dan Expo Campus yang informatif. Puncak acara akan ditutup dengan hiburan konser musik yang meriah.</p>
+    <!-- About Section -->
+    <section id="tentang" class="section section-about">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Tentang MECAMP-FEST 2026</h2>
+                <div class="title-underline"></div>
             </div>
-            <div class="about-image">
-                <img src="images/logo.jpg" alt="MECAMP 2026">
-            </div>
-        </div>
-
-        <div class="stats">
-            <div class="stats-grid">
-                <div class="stat-item">
-                    <h3>3.500+</h3>
-                    <p>Peserta Diharapkan</p>
-                </div>
-                <div class="stat-item">
-                    <h3>3 Hari</h3>
-                    <p>Festival Penuh</p>
-                </div>
-                <div class="stat-item">
-                    <h3>6 Tahun</h3>
-                    <p>Pengalaman</p>
-                </div>
-                <div class="stat-item">
-                    <h3>∞</h3>
-                    <p>Inspirasi & Peluang</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="tujuan">
-        <div class="section-ornament">❋</div>
-        <h2 class="section-title">Tujuan Kegiatan</h2>
-        <p class="section-subtitle">Lima Misi Utama untuk Masa Depan Cemerlang</p>
-
-        <div class="goals-grid">
-            <div class="goal-card">
-                <div class="goal-icon">📚</div>
-                <h3>Memberikan Informasi Pendidikan</h3>
-                <p>Menyediakan informasi lengkap mengenai pendaftaran dan kehidupan di PTN/PTS melalui berbagai jalur masuk perguruan tinggi.</p>
-            </div>
-
-            <div class="goal-card">
-                <div class="goal-icon">💼</div>
-                <h3>Meningkatkan Wawasan Karir</h3>
-                <p>Membuka pandangan peserta didik tentang dunia kerja, berbagai pilihan karir, dan potensi kewirausahaan yang dapat dikembangkan.</p>
-            </div>
-
-            <div class="goal-card">
-                <div class="goal-icon">🤝</div>
-                <h3>Memperkuat Silaturahmi Alumni</h3>
-                <p>Menjadi jembatan bagi Ikatan Alumni untuk berbagi pengalaman, bersilaturahmi, dan berkontribusi kepada almamater.</p>
-            </div>
-
-            <div class="goal-card">
-                <div class="goal-icon">🎨</div>
-                <h3>Mendorong Kreativitas</h3>
-                <p>Memberi ruang promosi bagi UMKM dan pelaku seni lokal melalui Bazar dan Pameran Seni yang inspiratif.</p>
-            </div>
-
-            <div class="goal-card">
-                <div class="goal-icon">🎭</div>
-                <h3>Menciptakan Acara Edukatif & Rekreatif</h3>
-                <p>Menggabungkan Expo Campus dengan Hiburan Konser Musik untuk pengalaman belajar yang menarik dan menyenangkan.</p>
-            </div>
-        </div>
-    </section>
-
-    <section id="pilar">
-        <div class="section-ornament">❋</div>
-        <h2 class="section-title">Pilar Utama Kegiatan</h2>
-        <p class="section-subtitle">Empat Fondasi Kesuksesan MECAMP-FEST 2026</p>
-
-        <div class="pillars-grid">
-            <div class="pillar-card">
-                <div class="pillar-icon">🎓</div>
-                <h3>Edukasi</h3>
-                <p>Memberikan informasi lengkap seputar kampus, jalur masuk, dan kehidupan kuliah melalui Expo Campus dan sesi sharing alumni.</p>
-            </div>
-
-            <div class="pillar-card">
-                <div class="pillar-icon">💼</div>
-                <h3>Karir</h3>
-                <p>Membuka wawasan tentang dunia kerja dan profesi dari alumni yang sudah berkarier di berbagai bidang industri.</p>
-            </div>
-
-            <div class="pillar-card">
-                <div class="pillar-icon">🚀</div>
-                <h3>Kewirausahaan</h3>
-                <p>Mendorong semangat berbisnis dan berinovasi melalui bazar UMKM dan berbagi pengalaman pelaku usaha muda.</p>
-            </div>
-
-            <div class="pillar-card">
-                <div class="pillar-icon">🎪</div>
-                <h3>Hiburan & Seni</h3>
-                <p>Menghadirkan suasana hangat dan meriah melalui penampilan seni, musik, dan kegiatan interaktif yang menghibur.</p>
-            </div>
-        </div>
-    </section>
-
-    <section id="jadwal">
-        <div class="section-ornament">❋</div>
-        <h2 class="section-title">Jadwal Kegiatan</h2>
-        <p class="section-subtitle">Tiga Hari Penuh Inspirasi, Pembelajaran, dan Hiburan</p>
-
-        <div class="timeline">
-            <div class="timeline-item">
-                <div class="timeline-content">
-                    <h3>Try Out Akbar</h3>
-                    <p>Pelaksanaan Try Out khusus untuk siswa-siswi kelas 12 MAN 1 Banyuwangi. Kegiatan ini bertujuan melatih kesiapan akademik sebelum menghadapi ujian masuk perguruan tinggi.</p>
-                    <p><strong>Lokasi:</strong> MAN 1 Banyuwangi</p>
-                    <p><strong>Peserta:</strong> Siswa Kelas XII</p>
-                </div>
-                <div class="timeline-date">Kamis, 22 Januari 2026</div>
-            </div>
-
-            <div class="timeline-item">
-                <div class="timeline-content">
-                    <h3>Sharing Session & Expo di Sekolah</h3>
-                    <p>Pembukaan resmi MECAMP-FEST 2026 dengan sesi sharing bersama alumni sukses, expo pendidikan dari berbagai perguruan tinggi, dan diskusi interaktif seputar karir dan perkuliahan.</p>
-                    <p><strong>Narasumber:</strong> Ali Moerdani (Alumni MAN 1 Banyuwangi)</p>
-                    <p><strong>Lokasi:</strong> Aula MAN 1 Banyuwangi</p>
-                </div>
-                <div class="timeline-date">Jumat, 23 Januari 2026</div>
-            </div>
-
-            <div class="timeline-item">
-                <div class="timeline-content">
-                    <h3>Puncak MECAMP-FEST 2026</h3>
-                    <p>Acara puncak dengan rangkaian kegiatan: jalan sehat, talkshow motivasi bersama Danang Giri Sadewa, pameran universitas, bazar UMKM, pameran seni, dan ditutup dengan konser musik yang meriah!</p>
-                    <p><strong>Tema:</strong> Balika Cipta Niskala</p>
-                    <p><strong>Lokasi:</strong> Gesibu Blambangan</p>
-                </div>
-                <div class="timeline-date">Sabtu, 24 Januari 2026</div>
-            </div>
-        </div>
-    </section>
-
-    <section id="audiens">
-        <div class="section-ornament">❋</div>
-        <h2 class="section-title">Target Audiens</h2>
-        <p class="section-subtitle">Membangun Ekosistem Pendidikan Bersama</p>
-
-        <div class="audience-grid">
-            <div class="audience-card">
-                <div class="audience-number">±1.400</div>
-                <p class="audience-label">Siswa<br>MAN 1 Banyuwangi</p>
-            </div>
-
-            <div class="audience-card">
-                <div class="audience-number">80</div>
-                <p class="audience-label">Dewan Guru, Kepala Sekolah & Kepala Kemenag</p>
-            </div>
-
-            <div class="audience-card">
-                <div class="audience-number">20</div>
-                <p class="audience-label">Siswa dari Sekolah Undangan/Delegasi</p>
-            </div>
-
-            <div class="audience-card">
-                <div class="audience-number">±2.000</div>
-                <p class="audience-label">Masyarakat<br>Umum</p>
-            </div>
-        </div>
-
-        <p style="text-align: center; margin-top: 4rem; font-size: 1.4rem; color: var(--color-primary); font-weight: 600;">
-            Total Estimasi: <strong style="font-size: 2.2rem; color: var(--color-accent); font-family: 'Playfair Display', serif;">±3.500 Peserta</strong>
-        </p>
-    </section>
-
-    <section id="kontak">
-        <div class="section-ornament">❋</div>
-        <h2 class="section-title">Hubungi Kami</h2>
-        <p class="section-subtitle">Informasi & Media Sosial MECAMP-FEST 2026</p>
-
-        <div class="contact-info">
-            <div class="contact-grid">
-                <div class="contact-item">
-                    <div class="contact-icon">
-                        <i class="fab fa-instagram"></i>
-                    </div>
-                    <h3>Instagram</h3>
-                    <p><a href="https://www.instagram.com/mecamp" target="_blank">@mecamp</a></p>
-                    <p class="contact-desc">Update kegiatan & dokumentasi</p>
-                </div>
-
-                <div class="contact-item">
-                    <div class="contact-icon">
-                        <i class="fab fa-youtube"></i>
-                    </div>
-                    <h3>YouTube</h3>
-                    <p><a href="https://youtube.com/@mecamp_man1bwi" target="_blank">@mecamp_man1bwi</a></p>
-                    <p class="contact-desc">Video highlights & materi edukasi</p>
-                </div>
-
-                <div class="contact-item">
-                    <div class="contact-icon">
-                        <i class="fas fa-envelope"></i>
-                    </div>
-                    <h3>Email</h3>
-                    <p><a href="mailto:mecampexpo@gmail.com">mecampexpo@gmail.com</a></p>
-                    <p class="contact-desc">Pertanyaan umum & informasi</p>
-                </div>
-            </div>
-
-            <div style="margin-top: 4rem; padding-top: 3rem; border-top: 2px solid rgba(238, 172, 126, 0.3); position: relative; z-index: 1;">
-                <h3 style="font-family: 'Playfair Display', serif; font-size: 1.8rem; margin-bottom: 1.5rem; color: var(--color-light); font-weight: 700;">
-                    Informasi Sponsorship & Kerjasama
-                </h3>
-                <p style="font-size: 1.15rem; margin-bottom: 2rem; color: var(--color-accent); line-height: 1.8;">Untuk peluang sponsorship dan kerjasama, silakan kunjungi:</p>
-                <a href="sponsorship.html" style="display: inline-block; padding: 1.2rem 3rem; background: linear-gradient(135deg, var(--color-accent), var(--color-light)); color: var(--color-dark); text-decoration: none; border-radius: 50px; font-weight: 700; margin-top: 1rem; transition: all 0.4s ease; border: 2px solid var(--color-cream); box-shadow: 0 8px 30px rgba(238, 172, 126, 0.4); text-transform: uppercase; letter-spacing: 1px;">
-                    Halaman Sponsorship
-                </a>
-            </div>
-        </div>
-    </section>
-
-    <footer>
-        <div class="footer-content">
-            <strong>MECAMP-FEST 2026</strong>
-            <p>"There is No Too Big Dream For a Little Dreamers"</p>
-            <p style="font-style: italic; color: var(--color-accent); margin: 1.5rem 0; font-size: 1.2rem; font-weight: 600;">Balika Cipta Niskala</p>
-            <p>Festival Edukasi, Pendidikan, Karir, dan Kewirausahaan</p>
             
-            <div class="copyright">
-                <p style="font-weight: 600;">© 2026 Ikatan Alumni MAN 1 Banyuwangi</p>
-                <p>Mansawangi Expo Campus · MAN 1 Banyuwangi</p>
+            <div class="about-content">
+                <div class="about-intro">
+                    <p class="lead-text">MECAMP-FEST 2026 yang diselenggarakan oleh <strong class="highlight">Ikatan Alumni MAN 1 Banyuwangi</strong> merupakan festival edukasi, pendidikan, karir, dan kewirausahaan yang menghadirkan serangkaian acara pameran informatif dan hiburan berkelas.</p>
+                </div>
+
+                <div class="about-history">
+                    <div class="history-card">
+                        <div class="history-icon">🎯</div>
+                        <div class="history-content">
+                            <h3>Sejarah & Transformasi</h3>
+                            <p>Sejak pertama kali diadakan pada tahun 2018 dan telah terselenggara sebanyak 5 kali, acara tahunan ini bertransformasi menjadi gelaran yang lebih besar dengan pameran seni, bazar UMKM, Expo Campus yang informatif, dan ditutup dengan hiburan konser musik yang meriah.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="theme-section">
+                    <div class="theme-card">
+                        <h3 class="theme-title">Tema: Balika Cipta Niskala</h3>
+                        <p class="theme-subtitle">(Penciptaan oleh gadis kecil atas hal-hal yang tadinya tak terwujud)</p>
+                        <div class="theme-description">
+                            <p>Tidak ada mimpi yang terlalu besar untuk sang pemimpi kecil. Sekecil apapun, bahkan seorang anak perempuan pun bisa menciptakan sesuatu dengan tekad yang kuat. Setiap mimpi butuh perjuangan, mulai dari membangun karir dengan keberanian melangkah dan kemauan untuk terus belajar.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Goals Section -->
+    <section id="tujuan" class="section section-goals">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Tujuan Kegiatan</h2>
+                <div class="title-underline"></div>
+            </div>
+
+            <div class="goals-grid">
+                <div class="goal-card">
+                    <div class="goal-icon">📚</div>
+                    <h3 class="goal-title">Memberikan Informasi Pendidikan</h3>
+                    <p class="goal-description">Menyediakan informasi lengkap mengenai pendaftaran dan kehidupan di PTN/PTS melalui berbagai jalur masuk yang tersedia.</p>
+                </div>
+
+                <div class="goal-card">
+                    <div class="goal-icon">💼</div>
+                    <h3 class="goal-title">Meningkatkan Wawasan Karir</h3>
+                    <p class="goal-description">Membuka pandangan peserta didik tentang dunia kerja, berbagai pilihan karir, dan peluang kewirausahaan yang menjanjikan.</p>
+                </div>
+
+                <div class="goal-card">
+                    <div class="goal-icon">🤝</div>
+                    <h3 class="goal-title">Memperkuat Silaturahmi Alumni</h3>
+                    <p class="goal-description">Menjadi jembatan bagi Ikatan Alumni untuk berbagi pengalaman, bersilaturahmi, dan berkontribusi kepada almamater tercinta.</p>
+                </div>
+
+                <div class="goal-card">
+                    <div class="goal-icon">🎨</div>
+                    <h3 class="goal-title">Mendorong Kreativitas</h3>
+                    <p class="goal-description">Memberi ruang promosi bagi UMKM dan pelaku seni lokal melalui Bazar dan Pameran Seni yang menarik.</p>
+                </div>
+
+                <div class="goal-card">
+                    <div class="goal-icon">🎭</div>
+                    <h3 class="goal-title">Menciptakan Acara Edukatif & Rekreatif</h3>
+                    <p class="goal-description">Menggabungkan Expo Campus dengan Hiburan Konser Musik untuk pengalaman belajar yang menyenangkan dan berkesan.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Schedule Section -->
+    <section id="jadwal" class="section section-schedule">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Jadwal Kegiatan</h2>
+                <div class="title-underline"></div>
+            </div>
+
+            <div class="schedule-timeline">
+                <div class="timeline-item">
+                    <div class="timeline-marker">
+                        <div class="timeline-dot"></div>
+                    </div>
+                    <div class="timeline-content">
+                        <div class="timeline-date">Kamis, 22 Januari 2026</div>
+                        <h3 class="timeline-title">Hari Pertama</h3>
+                        <p class="timeline-description">Tryout kelas 12 - Persiapan intensif untuk menghadapi ujian masuk perguruan tinggi</p>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-marker">
+                        <div class="timeline-dot"></div>
+                    </div>
+                    <div class="timeline-content">
+                        <div class="timeline-date">Jumat, 23 Januari 2026</div>
+                        <h3 class="timeline-title">Hari Kedua</h3>
+                        <p class="timeline-description">Talkshow Expo Campus bersama Alumni MAN 1 Banyuwangi yang telah sukses di berbagai bidang</p>
+                    </div>
+                </div>
+
+                <div class="timeline-item highlight-item">
+                    <div class="timeline-marker">
+                        <div class="timeline-dot"></div>
+                    </div>
+                    <div class="timeline-content">
+                        <div class="timeline-date">Sabtu, 24 Januari 2026</div>
+                        <h3 class="timeline-title">Hari Ketiga - Acara Puncak 🎉</h3>
+                        <p class="timeline-description">MECAMP-Festival 2026 di Gesibu Blambangan dengan Expo Campus, Bazar UMKM, Pameran Seni, dan Konser Musik</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="highlights-grid">
+                <div class="highlight-card">
+                    <div class="highlight-number">01</div>
+                    <h4>Try Out</h4>
+                    <p>Pelaksanaan Try Out oleh siswa-siswi kelas 12 MAN 1 Banyuwangi</p>
+                </div>
+                <div class="highlight-card">
+                    <div class="highlight-number">02</div>
+                    <h4>Talkshow Alumni</h4>
+                    <p>Berbagi inspirasi dan pengalaman dari alumni sukses</p>
+                </div>
+                <div class="highlight-card">
+                    <div class="highlight-number">03</div>
+                    <h4>Festival Meriah</h4>
+                    <p>Pameran, bazar, seni, dan hiburan dalam satu tempat</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tenant Section -->
+    <section id="tenant" class="section section-tenant">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Penawaran Spesial Tenant</h2>
+                <div class="title-underline"></div>
+                <p class="section-subtitle">Pilihan fleksibel untuk berbagai kebutuhan bisnis Anda</p>
+            </div>
+
+            <div class="tenant-options">
+                <div class="tenant-card partnership-card">
+                    <div class="tenant-badge">Populer</div>
+                    <div class="tenant-header">
+                        <div class="tenant-icon">🤝</div>
+                        <h3>Tenant Kemitraan</h3>
+                        <p class="tenant-type">Commitment Based</p>
+                    </div>
+                    
+                    <div class="tenant-price">
+                        <div class="price-tag free">GRATIS</div>
+                        <p class="price-note">Cocok untuk UMKM yang ingin berpartisipasi tanpa biaya</p>
+                    </div>
+
+                    <div class="tenant-details">
+                        <div class="detail-section">
+                            <h4>Persyaratan</h4>
+                            <div class="requirement-box">
+                                <p><strong>Deposit Komitmen:</strong></p>
+                                <p class="deposit-amount">Rp 500.000,-</p>
+                            </div>
+                        </div>
+
+                        <div class="detail-section">
+                            <h4>Pengembalian</h4>
+                            <div class="refund-box">
+                                <div class="refund-badge">100% Full Refund</div>
+                                <p>Dikembalikan H+7 setelah acara selama tenant mengikuti aturan dan beroperasi hingga akhir acara</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="tenant-features">
+                        <div class="feature-item">✓ Tanpa biaya sewa</div>
+                        <div class="feature-item">✓ Lokasi strategis</div>
+                        <div class="feature-item">✓ Akses ke ribuan pengunjung</div>
+                    </div>
+                </div>
+
+                <div class="tenant-card premium-card">
+                    <div class="tenant-badge premium">Premium</div>
+                    <div class="tenant-header">
+                        <div class="tenant-icon">⭐</div>
+                        <h3>Tenant Premium</h3>
+                        <p class="tenant-type">Area Dalam Gesibu</p>
+                    </div>
+                    
+                    <div class="tenant-price">
+                        <div class="price-amount">
+                            <span class="currency">Mulai</span>
+                            <span class="amount">Rp 500.000,-</span>
+                        </div>
+                        <p class="price-note">Lokasi eksklusif dengan traffic pengunjung tinggi</p>
+                    </div>
+
+                    <div class="tenant-details">
+                        <h4>Keunggulan Premium</h4>
+                        <ul class="premium-benefits">
+                            <li>
+                                <span class="benefit-icon">📍</span>
+                                <span>Lokasi lebih strategis di area utama</span>
+                            </li>
+                            <li>
+                                <span class="benefit-icon">🎤</span>
+                                <span>Dekat dengan panggung utama</span>
+                            </li>
+                            <li>
+                                <span class="benefit-icon">☂️</span>
+                                <span>Terlindung dari cuaca</span>
+                            </li>
+                            <li>
+                                <span class="benefit-icon">🏢</span>
+                                <span>Indoor Gesibu (Area Utama Acara)</span>
+                            </li>
+                            <li>
+                                <span class="benefit-icon">👥</span>
+                                <span>Eksposur maksimal ke pengunjung</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="tenant-features">
+                        <div class="feature-item premium">✓ Fasilitas premium</div>
+                        <div class="feature-item premium">✓ Branding maksimal</div>
+                        <div class="feature-item premium">✓ Dukungan promosi</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="cta-section">
+                <h3>Tertarik Menjadi Tenant?</h3>
+                <p>Daftar sekarang dan raih kesempatan emas untuk mengembangkan bisnis Anda!</p>
+                <a href="#kontak" class="cta-button">Hubungi Kami</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Audience Section -->
+    <section id="audiens" class="section section-audience">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Target Audiens</h2>
+                <div class="title-underline"></div>
+                <p class="section-subtitle">Jangkauan luas dengan estimasi <strong>±3.500 pengunjung</strong></p>
+            </div>
+
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-icon">🎓</div>
+                    <div class="stat-number">±1.400</div>
+                    <div class="stat-label">Siswa MAN 1 Banyuwangi</div>
+                    <div class="stat-bar">
+                        <div class="stat-fill" style="width: 40%"></div>
+                    </div>
+                </div>
+
+                <div class="stat-card">
+                    <div class="stat-icon">👨‍🏫</div>
+                    <div class="stat-number">80</div>
+                    <div class="stat-label">Dewan Guru & Kepala Sekolah</div>
+                    <div class="stat-bar">
+                        <div class="stat-fill" style="width: 15%"></div>
+                    </div>
+                </div>
+
+                <div class="stat-card">
+                    <div class="stat-icon">🎯</div>
+                    <div class="stat-number">20</div>
+                    <div class="stat-label">Siswa Delegasi</div>
+                    <div class="stat-bar">
+                        <div class="stat-fill" style="width: 5%"></div>
+                    </div>
+                </div>
+
+                <div class="stat-card highlight-stat">
+                    <div class="stat-icon">👥</div>
+                    <div class="stat-number">±2.000</div>
+                    <div class="stat-label">Masyarakat Umum</div>
+                    <div class="stat-bar">
+                        <div class="stat-fill" style="width: 57%"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="audience-benefits">
+                <h3>Mengapa MECAMP-FEST 2026?</h3>
+                <div class="benefits-grid">
+                    <div class="benefit-item">
+                        <div class="benefit-icon">🎯</div>
+                        <h4>Target Tepat</h4>
+                        <p>Menjangkau generasi muda yang produktif dan kreatif</p>
+                    </div>
+                    <div class="benefit-item">
+                        <div class="benefit-icon">📈</div>
+                        <h4>Eksposur Maksimal</h4>
+                        <p>Visibilitas tinggi untuk brand dan produk Anda</p>
+                    </div>
+                    <div class="benefit-item">
+                        <div class="benefit-icon">🤝</div>
+                        <h4>Networking</h4>
+                        <p>Kesempatan membangun relasi bisnis baru</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Committee Section -->
+    <section id="panitia" class="section section-committee">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Susunan Kepanitiaan</h2>
+                <div class="title-underline"></div>
+            </div>
+
+            <div class="core-committee">
+                <h3 class="subsection-title">Struktur Inti Kepanitiaan</h3>
+                <div class="core-grid">
+                    <div class="core-member">
+                        <div class="member-role">Pengarah</div>
+                        <div class="member-name">H. Sugeng Maryono</div>
+                        <div class="member-detail">Kepala MAN 1 Banyuwangi</div>
+                    </div>
+                    <div class="core-member">
+                        <div class="member-role">Penanggung Jawab</div>
+                        <div class="member-name">Levina Agustin</div>
+                        <div class="member-detail">Jember</div>
+                    </div>
+                    <div class="core-member highlight-member">
+                        <div class="member-role">Ketua Panitia</div>
+                        <div class="member-name">Zacky Zagarino</div>
+                        <div class="member-detail">Banyuwangi</div>
+                    </div>
+                    <div class="core-member">
+                        <div class="member-role">Wakil Ketua</div>
+                        <div class="member-name">Natasya Salsabila</div>
+                        <div class="member-detail">Banyuwangi</div>
+                    </div>
+                    <div class="core-member">
+                        <div class="member-role">Sekretaris</div>
+                        <div class="member-name">Kanaya Auriel Andaristy</div>
+                        <div class="member-detail">Jember</div>
+                        <div class="member-name secondary">Dona Agnesia</div>
+                        <div class="member-detail">Banyuwangi</div>
+                    </div>
+                    <div class="core-member">
+                        <div class="member-role">Bendahara</div>
+                        <div class="member-name">Rahma Alifiana Cik Amin</div>
+                        <div class="member-detail">Banyuwangi</div>
+                        <div class="member-name secondary">Aula Izzatul Laini</div>
+                        <div class="member-detail">Malang</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="divisions-committee">
+                <h3 class="subsection-title">Divisi Kepanitiaan</h3>
+                <div class="divisions-grid">
+                    <div class="division-card">
+                        <div class="division-header">
+                            <div class="division-icon">🎭</div>
+                            <h4>Divisi Acara</h4>
+                        </div>
+                        <div class="coordinator">
+                            <span class="coord-label">Koordinator:</span>
+                            <span class="coord-name">Muhammad Zavier Akbar</span>
+                        </div>
+                        <ul class="division-members">
+                            <li>Nazua Zuhria</li>
+                            <li>Cheryl Alifia</li>
+                            <li>Naraya Ghesa Prasetyo</li>
+                            <li>Ineyda Fadilla Aulia Putri</li>
+                            <li>Sulfi Wulandari</li>
+                        </ul>
+                    </div>
+
+                    <div class="division-card">
+                        <div class="division-header">
+                            <div class="division-icon">📢</div>
+                            <h4>Divisi Humas</h4>
+                        </div>
+                        <div class="coordinator">
+                            <span class="coord-label">Koordinator:</span>
+                            <span class="coord-name">Balqis Adilah Oktarina</span>
+                        </div>
+                        <ul class="division-members">
+                            <li>Suci Sevty Virgiyanti</li>
+                            <li>Naufal Nayif Kasabyu Ramadhan</li>
+                            <li>Achmad Vito Prayoga</li>
+                            <li>Yughi Syifa Linafusil Alilah</li>
+                        </ul>
+                    </div>
+
+                    <div class="division-card">
+                        <div class="division-header">
+                            <div class="division-icon">🎨</div>
+                            <h4>Divisi PDD</h4>
+                            <p class="division-subtitle">Publikasi, Dokumentasi, Desain</p>
+                        </div>
+                        <ul class="division-members">
+                            <li>Ahmad Dzaky Hibrizy</li>
+                            <li>Aqilah Ferryana Zahrah</li>
+                            <li>Risma Ramadhani</li>
+                            <li>Citra Anggun Lestari</li>
+                            <li>Jessica Sukma Ayu</li>
+                        </ul>
+                    </div>
+
+                    <div class="division-card">
+                        <div class="division-header">
+                            <div class="division-icon">🛠️</div>
+                            <h4>Divisi Perlengkapan</h4>
+                        </div>
+                        <div class="coordinator">
+                            <span class="coord-label">Koordinator:</span>
+                            <span class="coord-name">Mohammad Yoen Rijalul Qur'an</span>
+                        </div>
+                        <ul class="division-members">
+                            <li>Zazika Raya Brilianti</li>
+                            <li>Balqis Melinda Putri</li>
+                            <li>Sakinah Suciana</li>
+                            <li>Jelita Khoirotun Nissa</li>
+                            <li>Aurelia Garnet Kirena</li>
+                        </ul>
+                    </div>
+
+                    <div class="division-card">
+                        <div class="division-header">
+                            <div class="division-icon">💰</div>
+                            <h4>Divisi Dana Usaha</h4>
+                        </div>
+                        <div class="coordinator">
+                            <span class="coord-label">Koordinator:</span>
+                            <span class="coord-name">Mohammad Jevon Attaillah</span>
+                        </div>
+                        <ul class="division-members">
+                            <li>Sendi Eko Prasetyo</li>
+                            <li>Dian Restu Khoirunnisa</li>
+                            <li>Vina Faizatus Sofita</li>
+                            <li>Febriyan Putra Hariadi</li>
+                            <li>Nina Derizca</li>
+                            <li>Sazkiya Amanda Warda</li>
+                        </ul>
+                    </div>
+
+                    <div class="division-card">
+                        <div class="division-header">
+                            <div class="division-icon">🍽️</div>
+                            <h4>Divisi Konsumsi</h4>
+                        </div>
+                        <div class="coordinator">
+                            <span class="coord-label">Koordinator:</span>
+                            <span class="coord-name">Zahraa Fidela Putri Utami</span>
+                        </div>
+                        <ul class="division-members">
+                            <li>Isti Wahyuning Tyas</li>
+                            <li>Nawra Ayesha Rahma Zain</li>
+                            <li>Ivan Triwisudawan Sugianto</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="kontak" class="section section-contact">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Hubungi Kami</h2>
+                <div class="title-underline"></div>
+                <p class="section-subtitle">Ada pertanyaan? Kami siap membantu Anda</p>
+            </div>
+
+            <div class="contact-grid">
+                <div class="contact-info">
+                    <h3>Informasi Kontak</h3>
+                    <div class="contact-item">
+                        <div class="contact-icon">📧</div>
+                        <div class="contact-detail">
+                            <h4>Email</h4>
+                            <p>mecamp.fest2026@gmail.com</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">📱</div>
+                        <div class="contact-detail">
+                            <h4>WhatsApp</h4>
+                            <p>+62 812-3456-7890</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">📍</div>
+                        <div class="contact-detail">
+                            <h4>Lokasi Acara</h4>
+                            <p>Gesibu Blambangan, Banyuwangi</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">🏫</div>
+                        <div class="contact-detail">
+                            <h4>Alamat Sekretariat</h4>
+                            <p>MAN 1 Banyuwangi<br>Jl. Ikan Tongkol No. 21, Banyuwangi</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="contact-form-wrapper">
+                    <h3>Kirim Pesan</h3>
+                    <form class="contact-form" id="contactForm">
+                        <div class="form-group">
+                            <label for="name">Nama Lengkap</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">Nomor Telepon</label>
+                            <input type="tel" id="phone" name="phone" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="subject">Subjek</label>
+                            <select id="subject" name="subject" required>
+                                <option value="">Pilih Subjek</option>
+                                <option value="tenant">Informasi Tenant</option>
+                                <option value="sponsor">Sponsorship</option>
+                                <option value="partnership">Kemitraan</option>
+                                <option value="general">Pertanyaan Umum</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Pesan</label>
+                            <textarea id="message" name="message" rows="5" required></textarea>
+                        </div>
+                        <button type="submit" class="submit-button">Kirim Pesan</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-pattern"></div>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-main">
+                    <div class="footer-logo">
+                        <img src="images/logo.jpg" alt="Logo MECAMP-FEST 2026" class="footer-logo-img">
+                        <h3>MECAMP-FEST 2026</h3>
+                    </div>
+                    <p class="footer-tagline">"There is No Too Big Dream For a Little Dreamers"</p>
+                </div>
+
+                <div class="footer-info">
+                    <div class="footer-section">
+                        <h4>Tentang Acara</h4>
+                        <p>Festival Expo Campus terbesar di Banyuwangi yang menggabungkan edukasi, karir, dan hiburan dalam satu gelaran meriah.</p>
+                    </div>
+
+                    <div class="footer-section">
+                        <h4>Informasi</h4>
+                        <ul>
+                            <li>📅 22 - 24 Januari 2026</li>
+                            <li>📍 Gesibu Blambangan</li>
+                            <li>🎓 MAN 1 Banyuwangi</li>
+                            <li>👥 Ikatan Alumni</li>
+                        </ul>
+                    </div>
+
+                    <div class="footer-section">
+                        <h4>Media Sosial</h4>
+                        <div class="social-links">
+                            <a href="#" class="social-link" aria-label="Instagram">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+                                </svg>
+                            </a>
+                            <a href="#" class="social-link" aria-label="Twitter">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z"/>
+                                </svg>
+                            </a>
+                            <a href="#" class="social-link" aria-label="Facebook">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2026 Ikatan Alumni MAN 1 Banyuwangi. All rights reserved.</p>
+                <p class="footer-credit">Designed with ❤️ for MECAMP-FEST 2026</p>
             </div>
         </div>
     </footer>
 
-    <script>
-        // Navbar scroll effect
-        window.addEventListener('scroll', function() {
-            const navbar = document.getElementById('navbar');
-            if (window.scrollY > 100) {
-                navbar.classList.add('scrolled');
-            } else {
-                navbar.classList.remove('scrolled');
-            }
-        });
+    <!-- Scroll to Top Button -->
+    <button id="scrollTop" class="scroll-top" aria-label="Scroll to top">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <polyline points="18 15 12 9 6 15"></polyline>
+        </svg>
+    </button>
 
-        // Smooth scroll for anchor links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
-                if (target) {
-                    target.scrollIntoView({
-                        behavior: 'smooth',
-                        block: 'start'
-                    });
-                }
-            });
-        });
-    </script>
+    <script src="script.js"></script>
 </body>
 </html>
