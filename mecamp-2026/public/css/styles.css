@@ -158,7 +158,7 @@ header {
 }
 
 /* ============================================
-   NAVIGATION
+   NAVIGATION - FIXED
    ============================================ */
 
 .navbar {
@@ -172,7 +172,8 @@ header {
 .nav-container {
     max-width: 1200px;
     margin: 0 auto;
-    padding: 0 2rem;
+    padding: 0 1rem;
+    position: relative;
 }
 
 .mobile-menu-btn {
@@ -183,9 +184,15 @@ header {
     cursor: pointer;
     padding: 1rem 0;
     width: 100%;
+    justify-content: flex-start;
     align-items: center;
     gap: 0.75rem;
     transition: background-color var(--transition-fast);
+}
+
+.menu-text {
+    font-weight: 600;
+    font-size: 1rem;
 }
 
 .menu-icon {
@@ -205,7 +212,7 @@ header {
 }
 
 .mobile-menu-btn.active .menu-icon span:nth-child(1) {
-    transform: rotate(45deg) translateY(7px);
+    transform: rotate(45deg) translate(7px, 7px);
 }
 
 .mobile-menu-btn.active .menu-icon span:nth-child(2) {
@@ -213,7 +220,7 @@ header {
 }
 
 .mobile-menu-btn.active .menu-icon span:nth-child(3) {
-    transform: rotate(-45deg) translateY(-7px);
+    transform: rotate(-45deg) translate(6px, -6px);
 }
 
 .nav-menu {
@@ -223,6 +230,7 @@ header {
     flex-wrap: wrap;
     gap: 0.5rem;
     padding: 1rem 0;
+    margin: 0;
 }
 
 .nav-link {
@@ -253,7 +261,6 @@ header {
 .nav-link.active {
     background-color: var(--bark);
     color: var(--peach);
-    transform: translateY(-2px);
 }
 
 .nav-link:hover::after,
@@ -1389,30 +1396,12 @@ header {
 }
 
 /* ============================================
-   RESPONSIVE DESIGN
+   RESPONSIVE DESIGN - IMPROVED
    ============================================ */
 
-/* Tablet Landscape (769px - 1024px) */
-@media (max-width: 1024px) {
-    .container {
-        padding: 0 1.5rem;
-    }
-
-    .main-title {
-        font-size: 2.5rem;
-    }
-
-    .section-title {
-        font-size: 2.2rem;
-    }
-
-    .contact-grid {
-        grid-template-columns: 1fr;
-    }
-}
-
-/* Tablet Portrait (481px - 768px) */
+/* Tablet Portrait and Mobile */
 @media (max-width: 768px) {
+    /* Mobile Menu */
     .mobile-menu-btn {
         display: flex;
     }
@@ -1422,25 +1411,49 @@ header {
         flex-direction: column;
         gap: 0;
         padding: 0;
+        width: 100%;
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.3s ease;
     }
 
     .nav-menu.active {
         display: flex;
+        max-height: 500px;
+        padding-bottom: 1rem;
     }
 
     .nav-link {
         padding: 1rem 1.5rem;
         border-bottom: 1px solid rgba(233, 207, 153, 0.2);
         border-radius: 0;
+        width: 100%;
+        text-align: left;
+    }
+
+    .nav-link::after {
+        display: none;
+    }
+
+    /* Header Adjustments */
+    header {
+        padding: 2rem 0 1.5rem;
+    }
+
+    .logo {
+        width: 80px;
+        height: 80px;
+        padding: 8px;
+        border: 3px solid var(--peach);
     }
 
     .main-title {
-        font-size: 2.2rem;
+        font-size: 2rem;
         letter-spacing: 1.5px;
     }
 
     .tagline {
-        font-size: 1.1rem;
+        font-size: 1rem;
     }
 
     .event-info {
@@ -1448,21 +1461,50 @@ header {
         gap: 1rem;
     }
 
+    .event-date,
+    .event-location {
+        font-size: 0.95rem;
+        padding: 0.75rem 1.5rem;
+        width: 100%;
+        max-width: 300px;
+        justify-content: center;
+    }
+
+    /* Section Adjustments */
     .section {
-        padding: 4rem 0;
+        padding: 3rem 0;
     }
 
     .section-title {
-        font-size: 2rem;
+        font-size: 1.8rem;
     }
 
+    .section-subtitle {
+        font-size: 1rem;
+    }
+
+    /* Grid Layouts */
     .goals-grid,
     .tenant-options,
     .stats-grid,
-    .divisions-grid {
+    .divisions-grid,
+    .core-grid,
+    .benefits-grid,
+    .highlights-grid {
         grid-template-columns: 1fr;
+        gap: 1.5rem;
     }
 
+    /* Cards */
+    .goal-card,
+    .tenant-card,
+    .division-card,
+    .core-member,
+    .stat-card {
+        padding: 1.5rem;
+    }
+
+    /* Timeline */
     .timeline-item {
         padding-left: 70px;
     }
@@ -1476,58 +1518,155 @@ header {
         height: 50px;
     }
 
+    .highlight-item .timeline-dot {
+        width: 60px;
+        height: 60px;
+    }
+
+    /* History Card */
     .history-card {
         flex-direction: column;
         text-align: center;
+        padding: 2rem;
+    }
+
+    .history-icon {
+        font-size: 2.5rem;
+    }
+
+    /* Contact Section */
+    .contact-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
     }
 
     .contact-info,
     .contact-form-wrapper {
-        padding: 2rem;
+        padding: 1.5rem;
+    }
+
+    .contact-item {
+        padding: 1rem;
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .contact-icon {
+        font-size: 2.5rem;
+    }
+
+    /* Footer */
+    .footer {
+        padding: 3rem 0 1.5rem;
     }
 
     .footer-info {
         grid-template-columns: 1fr;
         gap: 2rem;
+        text-align: center;
+    }
+
+    .footer-section ul {
+        text-align: center;
+    }
+
+    .social-links {
+        justify-content: center;
+    }
+
+    /* Scroll to Top */
+    .scroll-top {
+        width: 50px;
+        height: 50px;
+        bottom: 20px;
+        right: 20px;
+    }
+
+    /* Forms */
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+        font-size: 16px; /* Prevent zoom on iOS */
+    }
+
+    .submit-button {
+        width: 100%;
+        padding: 1rem 2rem;
+    }
+
+    /* Tenant Cards */
+    .tenant-badge {
+        top: -10px;
+        right: 20px;
+        font-size: 0.85rem;
+        padding: 0.4rem 1rem;
+    }
+
+    .price-amount {
+        flex-direction: column;
+        gap: 0.25rem;
+    }
+
+    .amount {
+        font-size: 2rem;
+    }
+
+    /* Theme Card */
+    .theme-card {
+        padding: 2rem;
+    }
+
+    .theme-title {
+        font-size: 1.6rem;
+    }
+
+    .theme-subtitle {
+        font-size: 1rem;
+    }
+
+    /* Stat Cards */
+    .stat-number {
+        font-size: 2.5rem;
+    }
+
+    /* Division Members */
+    .division-members li {
+        font-size: 0.95rem;
     }
 }
 
-/* Mobile (320px - 480px) */
+/* Mobile Small (< 480px) */
 @media (max-width: 480px) {
     .container {
         padding: 0 1rem;
     }
 
-    header {
-        padding: 2rem 0 1.5rem;
-    }
-
     .logo {
-        width: 80px;
-        height: 80px;
+        width: 70px;
+        height: 70px;
     }
 
     .main-title {
-        font-size: 1.8rem;
+        font-size: 1.75rem;
         letter-spacing: 1px;
     }
 
     .tagline {
-        font-size: 1rem;
+        font-size: 0.95rem;
     }
 
     .event-date,
     .event-location {
         font-size: 0.9rem;
-        padding: 0.75rem 1.5rem;
+        padding: 0.7rem 1.25rem;
     }
 
     .section {
-        padding: 3rem 0;
+        padding: 2.5rem 0;
     }
 
     .section-title {
-        font-size: 1.75rem;
+        font-size: 1.6rem;
     }
 
     .timeline-item {
@@ -1539,6 +1678,11 @@ header {
         height: 40px;
     }
 
+    .highlight-item .timeline-dot {
+        width: 50px;
+        height: 50px;
+    }
+
     .schedule-timeline::before {
         left: 20px;
     }
@@ -1546,80 +1690,119 @@ header {
     .goal-card,
     .tenant-card,
     .division-card {
-        padding: 1.5rem;
+        padding: 1.25rem;
     }
 
-    .tenant-options,
-    .stats-grid {
-        grid-template-columns: 1fr;
-        gap: 1.5rem;
-    }
-
-    .stat-number {
+    .goal-icon,
+    .tenant-icon,
+    .division-icon {
         font-size: 2.5rem;
     }
 
-    .contact-item {
-        padding: 1rem;
+    .goal-title,
+    .division-card h4 {
+        font-size: 1.2rem;
+    }
+
+    .stat-number {
+        font-size: 2.2rem;
     }
 
     .contact-form-wrapper {
-        padding: 1.5rem;
-    }
-
-    .footer {
-        padding: 3rem 0 1.5rem;
+        padding: 1.25rem;
     }
 
     .scroll-top {
         width: 45px;
         height: 45px;
-        bottom: 20px;
-        right: 20px;
+        bottom: 15px;
+        right: 15px;
+    }
+
+    /* CTA Button */
+    .cta-button {
+        padding: 0.9rem 2rem;
+        font-size: 1rem;
+    }
+
+    /* Core Members */
+    .member-name {
+        font-size: 1.15rem;
+    }
+
+    /* Footer Logo */
+    .footer-logo-img {
+        width: 70px;
+        height: 70px;
+    }
+
+    .footer-logo h3 {
+        font-size: 1.6rem;
     }
 }
 
 /* Extra Small Mobile (< 360px) */
 @media (max-width: 359px) {
     .main-title {
-        font-size: 1.6rem;
+        font-size: 1.5rem;
+    }
+
+    .tagline {
+        font-size: 0.85rem;
+    }
+
+    .section-title {
+        font-size: 1.4rem;
+    }
+
+    .logo {
+        width: 60px;
+        height: 60px;
+    }
+
+    .event-date,
+    .event-location {
+        font-size: 0.85rem;
+        padding: 0.6rem 1rem;
+    }
+}
+
+/* Landscape Mode Fix */
+@media (max-height: 500px) and (orientation: landscape) {
+    header {
+        padding: 1.5rem 0 1rem;
+    }
+
+    .logo {
+        width: 60px;
+        height: 60px;
+    }
+
+    .main-title {
+        font-size: 1.5rem;
     }
 
     .tagline {
         font-size: 0.9rem;
     }
 
-    .section-title {
-        font-size: 1.6rem;
-    }
-
-    .logo {
-        width: 70px;
-        height: 70px;
+    .section {
+        padding: 2rem 0;
     }
 }
 
-/* Print Styles */
-@media print {
-    .navbar,
-    .mobile-menu-btn,
-    .scroll-top,
-    .social-links {
-        display: none !important;
+/* Touch Improvements */
+@media (hover: none) and (pointer: coarse) {
+    .nav-link,
+    .cta-button,
+    .submit-button,
+    .social-link,
+    .scroll-top {
+        min-height: 44px; /* iOS recommended touch target */
+        min-width: 44px;
     }
 
-    body {
-        background-color: white !important;
-    }
-
-    .section {
-        page-break-inside: avoid;
-    }
-
-    .goal-card,
-    .tenant-card,
-    .stat-card {
-        box-shadow: none !important;
-        border: 1px solid #ddd !important;
+    .nav-link {
+        padding: 1rem 1.5rem;
     }
 }
