@@ -215,46 +215,57 @@
 </section>
 
 <!-- Contact Section -->
-<section id="kontak" class="section section-contact">
-    <div class="container">
-        <div class="section-header">
-            <h2 class="section-title">Hubungi Kami</h2>
-            <div class="title-underline"></div>
-            <p class="section-subtitle">Ada pertanyaan? Kami siap membantu Anda</p>
+<div class="contact-info">
+    <h3>Informasi Kontak</h3>
+    
+    <div class="contact-item">
+        <div class="contact-icon">📧</div>
+        <div class="contact-detail">
+            <h4>Email</h4>
+            <p>
+                <a href="mailto:mecampexpo@gmail.com" style="color: inherit; text-decoration: none;">
+                    mecampexpo@gmail.com
+                </a>
+            </p>
         </div>
+    </div>
 
-        <div class="contact-grid">
-            <div class="contact-info">
-                <h3>Informasi Kontak</h3>
-                <div class="contact-item">
-                    <div class="contact-icon">📧</div>
-                    <div class="contact-detail">
-                        <h4>Email</h4>
-                        <p>mecamp.fest2026@gmail.com</p>
-                    </div>
-                </div>
-                <div class="contact-item">
-                    <div class="contact-icon">📱</div>
-                    <div class="contact-detail">
-                        <h4>WhatsApp</h4>
-                        <p>+62 812-3456-7890</p>
-                    </div>
-                </div>
-                <div class="contact-item">
-                    <div class="contact-icon">📍</div>
-                    <div class="contact-detail">
-                        <h4>Lokasi Acara</h4>
-                        <p>Gesibu Blambangan, Banyuwangi</p>
-                    </div>
-                </div>
-                <div class="contact-item">
-                    <div class="contact-icon">🏫</div>
-                    <div class="contact-detail">
-                        <h4>Alamat Sekretariat</h4>
-                        <p>MAN 1 Banyuwangi<br>Jl. Ikan Tongkol No. 21, Banyuwangi</p>
-                    </div>
-                </div>
-            </div>
+    <div class="contact-item">
+        <div class="contact-icon">📱</div>
+        <div class="contact-detail">
+            <h4>WhatsApp</h4>
+            <p>
+                <a href="https://wa.me/6285732689331?text=Halo%20kak,%20saya%20ingin%20bertanya%20seputar%20MECAMP-FEST%202026" target="_blank" style="color: inherit; text-decoration: none;">
+                    +62 857-3268-9331 (Tasya)
+                </a>
+            </p>
+        </div>
+    </div>
+
+    <div class="contact-item">
+        <div class="contact-icon">📍</div>
+        <div class="contact-detail">
+            <h4>Lokasi Acara</h4>
+            <p>
+                <a href="https://www.google.com/maps/search/?api=1&query=Gesibu+Blambangan,+Banyuwangi" target="_blank" style="color: inherit; text-decoration: none;">
+                    Gesibu Blambangan, Banyuwangi
+                </a>
+            </p>
+        </div>
+    </div>
+
+    <div class="contact-item">
+        <div class="contact-icon">🏫</div>
+        <div class="contact-detail">
+            <h4>Alamat Sekretariat</h4>
+            <p>
+                <a href="https://www.google.com/maps/search/?api=1&query=MAN+1+Banyuwangi" target="_blank" style="color: inherit; text-decoration: none;">
+                    MAN 1 Banyuwangi<br>Jl. Ikan Tongkol No. 21, Banyuwangi
+                </a>
+            </p>
+        </div>
+    </div>
+</div>
 
             <div class="contact-form-wrapper">
                 <h3>Kirim Pesan</h3>
