@@ -1,7 +1,6 @@
-<!-- Navigation -->
 <nav id="navbar" class="navbar">
     <div class="nav-container">
-        <button class="mobile-menu-btn" onclick="toggleMenu()" aria-label="Toggle navigation menu">
+        <button class="mobile-menu-btn" aria-label="Toggle navigation menu">
             <span class="menu-icon" id="menuIcon">
                 <span></span>
                 <span></span>

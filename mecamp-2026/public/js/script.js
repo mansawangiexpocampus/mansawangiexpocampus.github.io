@@ -22,21 +22,30 @@ function initMobileMenu() {
     const navLinks = document.querySelectorAll('.nav-link');
 
     if (menuBtn && navMenu) {
-        menuBtn.addEventListener('click', function() {
+        // Hapus event listener lama (clone node trick)
+        const newMenuBtn = menuBtn.cloneNode(true);
+        menuBtn.parentNode.replaceChild(newMenuBtn, menuBtn);
+
+        // Tambahkan event listener baru yang lebih kuat
+        newMenuBtn.addEventListener('click', function(e) {
+            e.stopPropagation(); // Mencegah klik tembus ke body
             toggleMenu();
         });
 
-        // Close menu when clicking a link
+        // Tutup menu saat link diklik
         navLinks.forEach(link => {
             link.addEventListener('click', function() {
                 closeMenu();
             });
         });
 
-        // Close menu when clicking outside
+        // Tutup menu saat klik di luar area
         document.addEventListener('click', function(event) {
             const navbar = document.querySelector('.navbar');
-            if (!navbar.contains(event.target) && navMenu.classList.contains('active')) {
+            const isMenuOpen = navMenu.classList.contains('active');
+            const isClickInside = navbar.contains(event.target);
+
+            if (isMenuOpen && !isClickInside) {
                 closeMenu();
             }
         });
@@ -52,26 +61,6 @@ function initMobileMenu() {
             }
         }, 250);
     });
-}
-
-function toggleMenu() {
-    const navMenu = document.getElementById('navMenu');
-    const menuBtn = document.querySelector('.mobile-menu-btn');
-    
-    if (navMenu && menuBtn) {
-        const isActive = navMenu.classList.toggle('active');
-        menuBtn.classList.toggle('active', isActive);
-    }
-}
-
-function closeMenu() {
-    const navMenu = document.getElementById('navMenu');
-    const menuBtn = document.querySelector('.mobile-menu-btn');
-    
-    if (navMenu && menuBtn) {
-        navMenu.classList.remove('active');
-        menuBtn.classList.remove('active');
-    }
 }
 
 // ============================================
