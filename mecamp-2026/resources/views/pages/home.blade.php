@@ -13,7 +13,7 @@
 
         <div class="about-content">
             <div class="about-intro">
-                <p class="lead-text">MECAMP-FEST 2026 yang diselenggarakan oleh <strong class="highlight">Ikatan Alumni MAN 1 Banyuwangi</strong> merupakan festival edukasi, pendidikan, karir, dan kewirausahaan yang menghadirkan serangkaian acara pameran informatif dan hiburan berkelas.</p>
+                <p class="lead-text">MECAMP-FEST 2026 yang diinisiasi oleh <strong class="highlight">Ikatan Alumni MAN 1 Banyuwangi dan diselenggarakan oleh tim Balika Cabinet</strong> merupakan festival edukasi, pendidikan, karir, dan kewirausahaan yang menghadirkan serangkaian acara pameran informatif dan hiburan berkelas.</p>
             </div>
 
             <div class="about-history">
@@ -235,8 +235,8 @@
         <div class="contact-detail">
             <h4>WhatsApp</h4>
             <p>
-                <a href="https://wa.me/6285732689331?text=Halo%20kak,%20saya%20ingin%20bertanya%20seputar%20MECAMP-FEST%202026" target="_blank" style="color: inherit; text-decoration: none;">
-                    +62 857-3268-9331 (Tasya)
+                <a href="https://wa.me/6288973189604?text=Halo%20kak,%20saya%20ingin%20bertanya%20seputar%20MECAMP-FEST%202026" target="_blank" style="color: inherit; text-decoration: none;">
+                    +62 889-7318-9604 (Admin)
                 </a>
             </p>
         </div>
