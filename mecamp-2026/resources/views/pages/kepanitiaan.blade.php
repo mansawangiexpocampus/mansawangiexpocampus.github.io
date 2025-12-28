@@ -3,7 +3,6 @@
 @section('title', 'MECAMP-FEST 2026 - Kepanitiaan')
 
 @section('content')
-<!-- Committee Section -->
 <section id="panitia" class="section section-committee">
     <div class="container">
         <div class="section-header">
@@ -56,7 +55,9 @@
             <div class="divisions-grid">
                 <div class="division-card">
                     <div class="division-header">
-                        <div class="division-icon">🎪</div>
+                        <div class="division-icon">
+                            <i class="fa-solid fa-calendar-check"></i>
+                        </div>
                         <h4>Divisi Acara</h4>
                     </div>
                     <div class="coordinator">
@@ -74,7 +75,9 @@
 
                 <div class="division-card">
                     <div class="division-header">
-                        <div class="division-icon">📣</div>
+                        <div class="division-icon">
+                            <i class="fa-solid fa-bullhorn"></i>
+                        </div>
                         <h4>Divisi Humas</h4>
                     </div>
                     <div class="coordinator">
@@ -91,7 +94,9 @@
 
                 <div class="division-card">
                     <div class="division-header">
-                        <div class="division-icon">🎨</div>
+                        <div class="division-icon">
+                            <i class="fa-solid fa-camera"></i>
+                        </div>
                         <h4>Divisi PDD</h4>
                         <p class="division-subtitle">Publikasi, Dokumentasi, Desain</p>
                     </div>
@@ -106,7 +111,9 @@
 
                 <div class="division-card">
                     <div class="division-header">
-                        <div class="division-icon">🛠️</div>
+                        <div class="division-icon">
+                            <i class="fa-solid fa-screwdriver-wrench"></i>
+                        </div>
                         <h4>Divisi Perlengkapan</h4>
                     </div>
                     <div class="coordinator">
@@ -124,7 +131,9 @@
 
                 <div class="division-card">
                     <div class="division-header">
-                        <div class="division-icon">💰</div>
+                        <div class="division-icon">
+                            <i class="fa-solid fa-sack-dollar"></i>
+                        </div>
                         <h4>Divisi Dana Usaha</h4>
                     </div>
                     <div class="coordinator">
@@ -143,7 +152,9 @@
 
                 <div class="division-card">
                     <div class="division-header">
-                        <div class="division-icon">🍽️</div>
+                        <div class="division-icon">
+                            <i class="fa-solid fa-utensils"></i>
+                        </div>
                         <h4>Divisi Konsumsi</h4>
                     </div>
                     <div class="coordinator">
@@ -161,7 +172,6 @@
     </div>
 </section>
 
-<!-- CTA Back to Home -->
 <section class="section" style="padding: 3rem 0;">
     <div class="container" style="text-align: center;">
         <a href="{{ route('home') }}" class="cta-button">Kembali ke Beranda</a>
